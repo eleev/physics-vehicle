@@ -16,21 +16,24 @@
 		A987EC06210D9B2F00D0C07E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A987EC04210D9B2F00D0C07E /* Main.storyboard */; };
 		A987EC08210D9B2F00D0C07E /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A987EBE4210D9B2E00D0C07E /* Actions.sks */; };
 		A987EC09210D9B2F00D0C07E /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A987EBE4210D9B2E00D0C07E /* Actions.sks */; };
-		A987EC0A210D9B2F00D0C07E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A987EBE5210D9B2E00D0C07E /* GameScene.sks */; };
-		A987EC0B210D9B2F00D0C07E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A987EBE5210D9B2E00D0C07E /* GameScene.sks */; };
-		A987EC0C210D9B2F00D0C07E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EBE6210D9B2E00D0C07E /* GameScene.swift */; };
-		A987EC0D210D9B2F00D0C07E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EBE6210D9B2E00D0C07E /* GameScene.swift */; };
-		A987EC0E210D9B2F00D0C07E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A987EBE7210D9B2F00D0C07E /* Assets.xcassets */; };
-		A987EC0F210D9B2F00D0C07E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A987EBE7210D9B2F00D0C07E /* Assets.xcassets */; };
 		A987EC19210D9BA600D0C07E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A987EC18210D9BA600D0C07E /* .gitignore */; };
 		A987EC1A210D9BA600D0C07E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A987EC18210D9BA600D0C07E /* .gitignore */; };
+		A987EC1C210D9DAE00D0C07E /* VehicleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC1B210D9DAE00D0C07E /* VehicleProtocol.swift */; };
+		A987EC1D210D9DAE00D0C07E /* VehicleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC1B210D9DAE00D0C07E /* VehicleProtocol.swift */; };
+		A987EC1F210E123900D0C07E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC1E210E123900D0C07E /* GameScene.swift */; };
+		A987EC20210E123900D0C07E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC1E210E123900D0C07E /* GameScene.swift */; };
+		A987EC22210E124700D0C07E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A987EC21210E124700D0C07E /* GameScene.sks */; };
+		A987EC23210E124700D0C07E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A987EC21210E124700D0C07E /* GameScene.sks */; };
+		A987EC25210E126200D0C07E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A987EC24210E125F00D0C07E /* Assets.xcassets */; };
+		A987EC26210E126200D0C07E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A987EC24210E125F00D0C07E /* Assets.xcassets */; };
+		A987EC28210E130900D0C07E /* VehicleJeep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC27210E130900D0C07E /* VehicleJeep.swift */; };
+		A987EC29210E130900D0C07E /* VehicleJeep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC27210E130900D0C07E /* VehicleJeep.swift */; };
+		A987EC2C210E133300D0C07E /* TrigonometryExtnesions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC2B210E133300D0C07E /* TrigonometryExtnesions.swift */; };
+		A987EC2D210E133300D0C07E /* TrigonometryExtnesions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC2B210E133300D0C07E /* TrigonometryExtnesions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A987EBE4210D9B2E00D0C07E /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		A987EBE5210D9B2E00D0C07E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		A987EBE6210D9B2E00D0C07E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		A987EBE7210D9B2F00D0C07E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A987EBEC210D9B2F00D0C07E /* ios-spritekit-physics-racing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-spritekit-physics-racing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A987EBEF210D9B2F00D0C07E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A987EBF1210D9B2F00D0C07E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +46,12 @@
 		A987EC05210D9B2F00D0C07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A987EC07210D9B2F00D0C07E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A987EC18210D9BA600D0C07E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A987EC1B210D9DAE00D0C07E /* VehicleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleProtocol.swift; sourceTree = "<group>"; };
+		A987EC1E210E123900D0C07E /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		A987EC21210E124700D0C07E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		A987EC24210E125F00D0C07E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A987EC27210E130900D0C07E /* VehicleJeep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleJeep.swift; sourceTree = "<group>"; };
+		A987EC2B210E133300D0C07E /* TrigonometryExtnesions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrigonometryExtnesions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +86,13 @@
 		A987EBE3210D9B2E00D0C07E /* ios-spritekit-physics-racing Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A987EC2A210E132100D0C07E /* Extensions */,
 				A987EBE4210D9B2E00D0C07E /* Actions.sks */,
-				A987EBE5210D9B2E00D0C07E /* GameScene.sks */,
-				A987EBE6210D9B2E00D0C07E /* GameScene.swift */,
-				A987EBE7210D9B2F00D0C07E /* Assets.xcassets */,
+				A987EC21210E124700D0C07E /* GameScene.sks */,
+				A987EC1E210E123900D0C07E /* GameScene.swift */,
+				A987EC24210E125F00D0C07E /* Assets.xcassets */,
+				A987EC1B210D9DAE00D0C07E /* VehicleProtocol.swift */,
+				A987EC27210E130900D0C07E /* VehicleJeep.swift */,
 			);
 			path = "ios-spritekit-physics-racing Shared";
 			sourceTree = "<group>";
@@ -115,6 +127,14 @@
 				A987EC07210D9B2F00D0C07E /* Info.plist */,
 			);
 			path = "ios-spritekit-physics-racing macOS";
+			sourceTree = "<group>";
+		};
+		A987EC2A210E132100D0C07E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A987EC2B210E133300D0C07E /* TrigonometryExtnesions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,12 +216,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A987EC0A210D9B2F00D0C07E /* GameScene.sks in Resources */,
 				A987EBF5210D9B2F00D0C07E /* Main.storyboard in Resources */,
 				A987EC08210D9B2F00D0C07E /* Actions.sks in Resources */,
 				A987EBF8210D9B2F00D0C07E /* LaunchScreen.storyboard in Resources */,
 				A987EC19210D9BA600D0C07E /* .gitignore in Resources */,
-				A987EC0E210D9B2F00D0C07E /* Assets.xcassets in Resources */,
+				A987EC25210E126200D0C07E /* Assets.xcassets in Resources */,
+				A987EC22210E124700D0C07E /* GameScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,10 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A987EC1A210D9BA600D0C07E /* .gitignore in Resources */,
+				A987EC23210E124700D0C07E /* GameScene.sks in Resources */,
 				A987EC06210D9B2F00D0C07E /* Main.storyboard in Resources */,
-				A987EC0B210D9B2F00D0C07E /* GameScene.sks in Resources */,
-				A987EC0F210D9B2F00D0C07E /* Assets.xcassets in Resources */,
 				A987EC09210D9B2F00D0C07E /* Actions.sks in Resources */,
+				A987EC26210E126200D0C07E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,8 +244,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A987EC0C210D9B2F00D0C07E /* GameScene.swift in Sources */,
+				A987EC28210E130900D0C07E /* VehicleJeep.swift in Sources */,
 				A987EBF2210D9B2F00D0C07E /* GameViewController.swift in Sources */,
+				A987EC1C210D9DAE00D0C07E /* VehicleProtocol.swift in Sources */,
+				A987EC1F210E123900D0C07E /* GameScene.swift in Sources */,
+				A987EC2C210E133300D0C07E /* TrigonometryExtnesions.swift in Sources */,
 				A987EBF0210D9B2F00D0C07E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,8 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A987EC0D210D9B2F00D0C07E /* GameScene.swift in Sources */,
+				A987EC29210E130900D0C07E /* VehicleJeep.swift in Sources */,
 				A987EC03210D9B2F00D0C07E /* GameViewController.swift in Sources */,
+				A987EC1D210D9DAE00D0C07E /* VehicleProtocol.swift in Sources */,
+				A987EC20210E123900D0C07E /* GameScene.swift in Sources */,
+				A987EC2D210E133300D0C07E /* TrigonometryExtnesions.swift in Sources */,
 				A987EC01210D9B2F00D0C07E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +406,7 @@
 		A987EC13210D9B2F00D0C07E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-ios";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3K58FE38R;
@@ -401,7 +427,7 @@
 		A987EC14210D9B2F00D0C07E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-ios";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3K58FE38R;
@@ -423,7 +449,7 @@
 		A987EC16210D9B2F00D0C07E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-mac";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -443,7 +469,7 @@
 		A987EC17210D9B2F00D0C07E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-mac";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
