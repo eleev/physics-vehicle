@@ -22,6 +22,8 @@
 		A987EC0D210D9B2F00D0C07E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EBE6210D9B2E00D0C07E /* GameScene.swift */; };
 		A987EC0E210D9B2F00D0C07E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A987EBE7210D9B2F00D0C07E /* Assets.xcassets */; };
 		A987EC0F210D9B2F00D0C07E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A987EBE7210D9B2F00D0C07E /* Assets.xcassets */; };
+		A987EC19210D9BA600D0C07E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A987EC18210D9BA600D0C07E /* .gitignore */; };
+		A987EC1A210D9BA600D0C07E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A987EC18210D9BA600D0C07E /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,7 @@
 		A987EC02210D9B2F00D0C07E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A987EC05210D9B2F00D0C07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A987EC07210D9B2F00D0C07E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A987EC18210D9BA600D0C07E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 		A987EBDE210D9B2E00D0C07E = {
 			isa = PBXGroup;
 			children = (
+				A987EC18210D9BA600D0C07E /* .gitignore */,
 				A987EBE3210D9B2E00D0C07E /* ios-spritekit-physics-racing Shared */,
 				A987EBEE210D9B2F00D0C07E /* ios-spritekit-physics-racing iOS */,
 				A987EBFF210D9B2F00D0C07E /* ios-spritekit-physics-racing macOS */,
@@ -196,6 +200,7 @@
 				A987EBF5210D9B2F00D0C07E /* Main.storyboard in Resources */,
 				A987EC08210D9B2F00D0C07E /* Actions.sks in Resources */,
 				A987EBF8210D9B2F00D0C07E /* LaunchScreen.storyboard in Resources */,
+				A987EC19210D9BA600D0C07E /* .gitignore in Resources */,
 				A987EC0E210D9B2F00D0C07E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A987EC1A210D9BA600D0C07E /* .gitignore in Resources */,
 				A987EC06210D9B2F00D0C07E /* Main.storyboard in Resources */,
 				A987EC0B210D9B2F00D0C07E /* GameScene.sks in Resources */,
 				A987EC0F210D9B2F00D0C07E /* Assets.xcassets in Resources */,
@@ -377,6 +383,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3K58FE38R;
 				INFOPLIST_FILE = "ios-spritekit-physics-racing iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -397,6 +404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3K58FE38R;
 				INFOPLIST_FILE = "ios-spritekit-physics-racing iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
