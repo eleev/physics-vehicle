@@ -8,10 +8,7 @@
 
 import SpriteKit
 
-
-    
-
-class VehicleJeep: SKNode {
+class VehicleJeep: SKNode, VehicleProtocol {
     
     var joints = [SKPhysicsJoint]()
     var chasis: SKSpriteNode
@@ -19,7 +16,7 @@ class VehicleJeep: SKNode {
     var leftWheel: SKSpriteNode
     var rightWheel: SKSpriteNode
     
-    init(position: CGPoint) {
+    required init(position: CGPoint) {
         let wheelOffsetY: CGFloat = 65
         let damping: CGFloat = 0.75
         let frequiency: CGFloat = 5
