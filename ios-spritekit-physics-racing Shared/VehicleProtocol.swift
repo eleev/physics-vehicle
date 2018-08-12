@@ -9,6 +9,14 @@
 import SpriteKit
 
 protocol VehicleProtocol: class {
-    var parts: [SKNode] { get set }
-    // In development
+    var joints: [SKPhysicsJoint] { get }
+    var chasis: SKSpriteNode { get }
+
+    init(position: CGPoint)
+
+    func applyForwardImpulse()
+    func applyBackwardImpulse()
+    func applyLeftTilt()
+    func applyRightTilt()
+    
 }
