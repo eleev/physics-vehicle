@@ -12,7 +12,7 @@ class GameScene: SKScene {
 
     // MARK: - Properties
     
-    var car: VehicleJeep!
+    var car: VehicleProtocol!
     
     var hudNode: SKNode!
     var cameraNode: SKCameraNode!
@@ -63,14 +63,15 @@ class GameScene: SKScene {
         let spawnPosition = childNode(withName: "//Spawn Position")
         
         car = VehicleJeep(position: spawnPosition?.position ?? .zero)
-        addChild(car)
+//        car = VehicleHumvee(position: spawnPosition?.position ?? .zero)
+        addChild(car as! SKNode)
         
         car.joints.forEach { joint in
             self.physicsWorld.add(joint)
         }
         
         
-        // CnConstraint the camera to follow the car
+        // Constraint the camera to follow the car
         let zeroDistance = SKRange(constantValue: 0)
         let playerConstraint = SKConstraint.distance(zeroDistance, to: car.chasis)
         camera?.constraints = [playerConstraint]
