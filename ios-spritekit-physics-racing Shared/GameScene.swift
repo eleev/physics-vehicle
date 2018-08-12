@@ -78,6 +78,17 @@ class GameScene: SKScene {
         camera?.xScale = 1.0
         camera?.yScale = 1.0
         
+        #if os(iOS)
+        if UIDevice().userInterfaceIdiom == .phone {
+            camera?.xScale = 2.5
+            camera?.yScale = 2.5
+            
+            hudNode.position.y += 50
+            hudNode.xScale = 0.6
+            hudNode.yScale = 0.6
+        }
+        #endif
+        
     }
     
     #if os(watchOS)

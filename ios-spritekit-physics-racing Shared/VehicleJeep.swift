@@ -171,13 +171,13 @@ class VehicleJeep: SKNode, VehicleProtocol {
         let convertedPoint = chasis.convert(point, to: self)
         debugPrint("coverted left point: ", convertedPoint)
         
-        let node = SKShapeNode(circleOfRadius: 10)
-        node.fillColor = .blue
-        node.zPosition = 10000
-        node.position = convertedPoint
-        self.addChild(node)
-        let actions = SKAction.sequence([SKAction.wait(forDuration: 2), SKAction.removeFromParent()])
-        node.run(actions)
+//        let node = SKShapeNode(circleOfRadius: 10)
+//        node.fillColor = .blue
+//        node.zPosition = 10000
+//        node.position = convertedPoint
+//        self.addChild(node)
+//        let actions = SKAction.sequence([SKAction.wait(forDuration: 2), SKAction.removeFromParent()])
+//        node.run(actions)
         
         let angle = chasis.zRotation - CGFloat.pi / 2
         let x = cos(angle)
@@ -194,13 +194,13 @@ class VehicleJeep: SKNode, VehicleProtocol {
         let convertedPoint = chasis.convert(point, to: self)
         debugPrint("coverted left point: ", convertedPoint)
         
-        let node = SKShapeNode(circleOfRadius: 10)
-        node.fillColor = .red
-        node.zPosition = 10000
-        node.position = convertedPoint
-        self.addChild(node)
-        let actions = SKAction.sequence([SKAction.wait(forDuration: 2), SKAction.removeFromParent()])
-        node.run(actions)
+//        let node = SKShapeNode(circleOfRadius: 10)
+//        node.fillColor = .red
+//        node.zPosition = 10000
+//        node.position = convertedPoint
+//        self.addChild(node)
+//        let actions = SKAction.sequence([SKAction.wait(forDuration: 2), SKAction.removeFromParent()])
+//        node.run(actions)
         
         let angle = chasis.zRotation - CGFloat.pi / 2
         let x = cos(angle)
