@@ -21,8 +21,8 @@ class VehicleHumvee: SKNode, VehicleProtocol {
     
     required init(position: CGPoint) {
         let wheelOffsetY: CGFloat = 95
-        let damping: CGFloat = 0.75
-        let frequiency: CGFloat = 5
+        let damping: CGFloat = 0.5
+        let frequiency: CGFloat = 6
         
         
         var bodyTexture: SKTexture!
@@ -149,7 +149,7 @@ class VehicleHumvee: SKNode, VehicleProtocol {
         let chasisZRotation = chasis.zRotation.toDegrees
         
         if chasisZRotation > -90, chasisZRotation > -270 {
-            let impulseVector = CGVector(dx: 22, dy: 0.0)
+            let impulseVector = CGVector(dx: 32, dy: 0.0)
             leftWheel.physicsBody?.applyImpulse(impulseVector)
             rightWheel.physicsBody?.applyImpulse(impulseVector)
         }
