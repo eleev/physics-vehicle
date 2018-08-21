@@ -62,8 +62,8 @@ class GameScene: SKScene {
         
         let spawnPosition = childNode(withName: "//Spawn Position")
         
-        car = VehicleJeep(position: spawnPosition?.position ?? .zero)
-//        car = VehicleHumvee(position: spawnPosition?.position ?? .zero)
+//        car = VehicleJeep(position: spawnPosition?.position ?? .zero)
+        car = VehicleHumvee(position: spawnPosition?.position ?? .zero)
         addChild(car as! SKNode)
         
         car.joints.forEach { joint in
