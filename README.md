@@ -6,7 +6,7 @@
 **Last Update: 07/October/2018.**
 
 # ✍️ About
-🎮🏎 Physics based racing game where the player is challanged to overcome many obstacles controlling various vehicles with suspension, tracks, soft tiers and even more sophisticated mechanics.
+🎮🏎 Physics based racing game where the player is challanged to overcome many obstacles controlling by various vehicles with suspension, tracks, soft tiers and even more sophisticated physics-based mechanics.
 
 # 📺 Demo
 
