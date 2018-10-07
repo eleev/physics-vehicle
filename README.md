@@ -14,4 +14,4 @@
 [Astemir Eleev](https://github.com/jVirus)
 
 # 🔖 Licence
-The project is availabe under [MIT licence]()
+The project is availabe under [MIT licence](https://github.com/jVirus/ios-spritekit-physics-racing/blob/master/LICENSE)
