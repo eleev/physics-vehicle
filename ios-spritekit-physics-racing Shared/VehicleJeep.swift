@@ -26,7 +26,7 @@ class VehicleJeep: SKNode, VehicleProtocol {
         let carBodyImageName = "car-body"
         
         #if os(macOS)
-        bodyTexture = SKTexture(image: NSImage(named: NSImage.Name(rawValue: carBodyImageName))!)
+        bodyTexture = SKTexture(image: NSImage(named: carBodyImageName)!)
         #endif
         
         #if os(iOS)
@@ -44,7 +44,7 @@ class VehicleJeep: SKNode, VehicleProtocol {
         let carWheelImageName = "car-wheel"
         
         #if os(macOS)
-        tireTexture = SKTexture(image: NSImage(named: NSImage.Name(rawValue: carWheelImageName))!)
+        tireTexture = SKTexture(image: NSImage(named: carWheelImageName)!)
         #endif
         
         #if os(iOS)

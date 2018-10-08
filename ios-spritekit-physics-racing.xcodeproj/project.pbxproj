@@ -193,6 +193,7 @@
 					};
 					A987EBFD210D9B2F00D0C07E = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -468,7 +469,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-physics-racing";
 				PRODUCT_NAME = "ios-spritekit-physics-racing";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -488,7 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-physics-racing";
 				PRODUCT_NAME = "ios-spritekit-physics-racing";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
