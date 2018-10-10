@@ -35,6 +35,8 @@
 		A987EC29210E130900D0C07E /* VehicleJeep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC27210E130900D0C07E /* VehicleJeep.swift */; };
 		A987EC2C210E133300D0C07E /* TrigonometryExtnesions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC2B210E133300D0C07E /* TrigonometryExtnesions.swift */; };
 		A987EC2D210E133300D0C07E /* TrigonometryExtnesions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC2B210E133300D0C07E /* TrigonometryExtnesions.swift */; };
+		A9D1E9E6216E622E00818194 /* ChasisBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D1E9E5216E622E00818194 /* ChasisBuilder.swift */; };
+		A9D1E9E8216E629B00818194 /* ChasisVehicleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D1E9E7216E629B00818194 /* ChasisVehicleFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		A987EC24210E125F00D0C07E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A987EC27210E130900D0C07E /* VehicleJeep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleJeep.swift; sourceTree = "<group>"; };
 		A987EC2B210E133300D0C07E /* TrigonometryExtnesions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrigonometryExtnesions.swift; sourceTree = "<group>"; };
+		A9D1E9E5216E622E00818194 /* ChasisBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChasisBuilder.swift; sourceTree = "<group>"; };
+		A9D1E9E7216E629B00818194 /* ChasisVehicleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChasisVehicleFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +88,11 @@
 		A9300ADF216E5EBB00AF1C06 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A9300AE4216E5F2C00AF1C06 /* WheelVehicleProtocol.swift */,
 				A9300AE0216E5ECF00AF1C06 /* WheelBuilder.swift */,
 				A9300AE2216E5EEB00AF1C06 /* WheelVehicleComponentsFactory.swift */,
-				A9300AE4216E5F2C00AF1C06 /* WheelVehicleProtocol.swift */,
+				A9D1E9E5216E622E00818194 /* ChasisBuilder.swift */,
+				A9D1E9E7216E629B00818194 /* ChasisVehicleFactory.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -267,8 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A987EC28210E130900D0C07E /* VehicleJeep.swift in Sources */,
+				A9D1E9E6216E622E00818194 /* ChasisBuilder.swift in Sources */,
 				A9300AE3216E5EEB00AF1C06 /* WheelVehicleComponentsFactory.swift in Sources */,
 				A9300AE5216E5F2C00AF1C06 /* WheelVehicleProtocol.swift in Sources */,
+				A9D1E9E8216E629B00818194 /* ChasisVehicleFactory.swift in Sources */,
 				A9300AE1216E5ECF00AF1C06 /* WheelBuilder.swift in Sources */,
 				A987EBF2210D9B2F00D0C07E /* GameViewController.swift in Sources */,
 				A987EC1C210D9DAE00D0C07E /* VehicleProtocol.swift in Sources */,
