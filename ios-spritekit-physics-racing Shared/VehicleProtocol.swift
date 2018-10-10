@@ -18,5 +18,4 @@ protocol VehicleProtocol: class {
     func applyBackwardImpulse()
     func applyLeftTilt()
     func applyRightTilt()
-    
 }
