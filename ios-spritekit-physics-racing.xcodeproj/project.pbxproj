@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		A9062577212052BE00324732 /* VehicleHumvee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9062576212052BE00324732 /* VehicleHumvee.swift */; };
 		A9062578212052BE00324732 /* VehicleHumvee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9062576212052BE00324732 /* VehicleHumvee.swift */; };
+		A9300AE1216E5ECF00AF1C06 /* WheelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9300AE0216E5ECF00AF1C06 /* WheelBuilder.swift */; };
+		A9300AE3216E5EEB00AF1C06 /* WheelVehicleComponentsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9300AE2216E5EEB00AF1C06 /* WheelVehicleComponentsFactory.swift */; };
+		A9300AE5216E5F2C00AF1C06 /* WheelVehicleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9300AE4216E5F2C00AF1C06 /* WheelVehicleProtocol.swift */; };
+		A9300AE6216E5F5300AF1C06 /* VehicleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC1B210D9DAE00D0C07E /* VehicleProtocol.swift */; };
 		A987EBF0210D9B2F00D0C07E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EBEF210D9B2F00D0C07E /* AppDelegate.swift */; };
 		A987EBF2210D9B2F00D0C07E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EBF1210D9B2F00D0C07E /* GameViewController.swift */; };
 		A987EBF5210D9B2F00D0C07E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A987EBF3210D9B2F00D0C07E /* Main.storyboard */; };
@@ -21,7 +25,6 @@
 		A987EC19210D9BA600D0C07E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A987EC18210D9BA600D0C07E /* .gitignore */; };
 		A987EC1A210D9BA600D0C07E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A987EC18210D9BA600D0C07E /* .gitignore */; };
 		A987EC1C210D9DAE00D0C07E /* VehicleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC1B210D9DAE00D0C07E /* VehicleProtocol.swift */; };
-		A987EC1D210D9DAE00D0C07E /* VehicleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC1B210D9DAE00D0C07E /* VehicleProtocol.swift */; };
 		A987EC1F210E123900D0C07E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC1E210E123900D0C07E /* GameScene.swift */; };
 		A987EC20210E123900D0C07E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC1E210E123900D0C07E /* GameScene.swift */; };
 		A987EC22210E124700D0C07E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A987EC21210E124700D0C07E /* GameScene.sks */; };
@@ -36,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		A9062576212052BE00324732 /* VehicleHumvee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleHumvee.swift; sourceTree = "<group>"; };
+		A9300AE0216E5ECF00AF1C06 /* WheelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelBuilder.swift; sourceTree = "<group>"; };
+		A9300AE2216E5EEB00AF1C06 /* WheelVehicleComponentsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelVehicleComponentsFactory.swift; sourceTree = "<group>"; };
+		A9300AE4216E5F2C00AF1C06 /* WheelVehicleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelVehicleProtocol.swift; sourceTree = "<group>"; };
 		A987EBE4210D9B2E00D0C07E /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		A987EBEC210D9B2F00D0C07E /* ios-spritekit-physics-racing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-spritekit-physics-racing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A987EBEF210D9B2F00D0C07E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +81,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9300ADF216E5EBB00AF1C06 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A9300AE0216E5ECF00AF1C06 /* WheelBuilder.swift */,
+				A9300AE2216E5EEB00AF1C06 /* WheelVehicleComponentsFactory.swift */,
+				A9300AE4216E5F2C00AF1C06 /* WheelVehicleProtocol.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		A987EBDE210D9B2E00D0C07E = {
 			isa = PBXGroup;
 			children = (
@@ -89,14 +105,15 @@
 		A987EBE3210D9B2E00D0C07E /* ios-spritekit-physics-racing Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A9300ADF216E5EBB00AF1C06 /* Components */,
 				A987EC2A210E132100D0C07E /* Extensions */,
 				A987EBE4210D9B2E00D0C07E /* Actions.sks */,
 				A987EC21210E124700D0C07E /* GameScene.sks */,
 				A987EC1E210E123900D0C07E /* GameScene.swift */,
 				A987EC24210E125F00D0C07E /* Assets.xcassets */,
-				A987EC1B210D9DAE00D0C07E /* VehicleProtocol.swift */,
 				A987EC27210E130900D0C07E /* VehicleJeep.swift */,
 				A9062576212052BE00324732 /* VehicleHumvee.swift */,
+				A987EC1B210D9DAE00D0C07E /* VehicleProtocol.swift */,
 			);
 			path = "ios-spritekit-physics-racing Shared";
 			sourceTree = "<group>";
@@ -250,6 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A987EC28210E130900D0C07E /* VehicleJeep.swift in Sources */,
+				A9300AE3216E5EEB00AF1C06 /* WheelVehicleComponentsFactory.swift in Sources */,
+				A9300AE5216E5F2C00AF1C06 /* WheelVehicleProtocol.swift in Sources */,
+				A9300AE1216E5ECF00AF1C06 /* WheelBuilder.swift in Sources */,
 				A987EBF2210D9B2F00D0C07E /* GameViewController.swift in Sources */,
 				A987EC1C210D9DAE00D0C07E /* VehicleProtocol.swift in Sources */,
 				A987EC1F210E123900D0C07E /* GameScene.swift in Sources */,
@@ -265,8 +285,8 @@
 			files = (
 				A987EC29210E130900D0C07E /* VehicleJeep.swift in Sources */,
 				A987EC03210D9B2F00D0C07E /* GameViewController.swift in Sources */,
-				A987EC1D210D9DAE00D0C07E /* VehicleProtocol.swift in Sources */,
 				A987EC20210E123900D0C07E /* GameScene.swift in Sources */,
+				A9300AE6216E5F5300AF1C06 /* VehicleProtocol.swift in Sources */,
 				A987EC2D210E133300D0C07E /* TrigonometryExtnesions.swift in Sources */,
 				A9062578212052BE00324732 /* VehicleHumvee.swift in Sources */,
 				A987EC01210D9B2F00D0C07E /* AppDelegate.swift in Sources */,
