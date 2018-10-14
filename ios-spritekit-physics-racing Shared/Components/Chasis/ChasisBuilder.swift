@@ -2,7 +2,7 @@
 //  ChasisBuilder.swift
 //  ios-spritekit-physics-racing iOS
 //
-//  Created by Astemir Eleev on 10/10/2018.
+//  Created by Astemir Eleev on 14/10/2018.
 //  Copyright © 2018 Astemir Eleev. All rights reserved.
 //
 
@@ -14,3 +14,4 @@ protocol ChasisBuilder {
     var zPosition: CGFloat { get }
     var position: CGPoint { get }
 }
+

@@ -15,8 +15,12 @@ struct ChasisVehicleFactory {
     /// - Parameters:
     ///     - builder: is a ChasisBuilder that holds all the chasis configuration
     /// - Returns: a SKSpriteNode component that represents a vehicle's chasis and can be futher used as a vehicle's component
-    func produce(using builder: ChasisBuidler) -> SKSpriteNode {
-        fatalError(#function + " has not been implemented yet")
-        return SKSpriteNode(color: .clear, size: .zero)
+    func produce(using builder: ChasisBuilder) -> SKSpriteNode {
+        let chasis = SKSpriteNode(texture: builder.texture, size: builder.size)
+        chasis.zPosition = builder.zPosition
+        chasis.position = builder.position
+        chasis.physicsBody = SKPhysicsBody(texture: builder.texture, alphaThreshold: 0.0, size: chasis.size)
+        
+        return chasis
     }
 }
