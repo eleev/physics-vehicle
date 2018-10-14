@@ -6,7 +6,7 @@
 //  Copyright © 2018 Astemir Eleev. All rights reserved.
 //
 
-import Foundation
+import SpriteKit
 
 protocol WheelVehicleProtocol: VehicleProtocol {
     var leftWheel: SKSpriteNode { get }
