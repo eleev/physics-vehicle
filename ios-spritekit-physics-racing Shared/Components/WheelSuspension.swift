@@ -19,11 +19,32 @@ struct WheelSuspension {
     
     // MARK: - Initializers
     
-    init(builder: WheelSuspensionBuilder) {
+    init?(builder: WheelSuspensionBuilder, attachmentBody body: ChasisNode, attachmentWheel wheel: WheelNode) {
         shockPost = SKSpriteNode(color: builder.shockPostColor, size: builder.shockPostSize)
         shockPost.position = builder.shockPostPosition
         shockPost.physicsBody = SKPhysicsBody(rectangleOf: shockPost.size)
         
-        fatalError()
+        guard let bodyPhysics = body.physicsBody, let wheelPhysics = wheel.physicsBody else {
+            return nil
+        }
+        
+        slideJoint = SKPhysicsJointSliding.joint(withBodyA: bodyPhysics,
+                                                 bodyB: shockPost.physicsBody!,
+                                                 anchor: shockPost.position,
+                                                 axis: CGVector(dx: 0, dy: 1))
+        slideJoint.shouldEnableLimits = true
+        slideJoint.lowerDistanceLimit = builder.slideLoweLimit
+        slideJoint.upperDistanceLimit = builder.wheelOffset.y
+        
+        springJoint = SKPhysicsJointSpring.joint(withBodyA: bodyPhysics,
+                                                 bodyB: wheelPhysics,
+                                                 anchorA: builder.springAttachmentPoint,
+                                                 anchorB: wheel.position)
+        springJoint.damping = builder.dapming
+        springJoint.frequency = builder.frequiency
+        
+        pinJoint = SKPhysicsJointPin.joint(withBodyA: shockPost.physicsBody!,
+                                           bodyB: wheelPhysics,
+                                           anchor: wheel.position)
     }
 }
