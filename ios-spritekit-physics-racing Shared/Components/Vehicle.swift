@@ -14,11 +14,11 @@ class Vehicle: SKNode {
     
     private var joints: [SKPhysicsJoint]
     private var chasis: ChasisNode
-    private var wheels: [Wheel]
+    private var wheels: [PhysicsWheel]
     
     // MARK: - Initializers
     
-    init(position: CGPoint, chasis: ChasisNode, wheels: [Wheel]) {
+    init(position: CGPoint, chasis: ChasisNode, wheels: [PhysicsWheel]) {
         joints = []
         self.wheels = wheels
         self.chasis = chasis
