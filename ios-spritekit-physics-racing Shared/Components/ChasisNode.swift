@@ -14,8 +14,10 @@ class ChasisNode: SKSpriteNode {
     
     init(builder: ChasisBuilder) {
         super.init(texture: builder.texture, color: .clear, size: builder.size)
-        self.position = builder.position
-        self.zPosition = builder.zPosition
+        
+        position = builder.position
+        zPosition = builder.zPosition
+        physicsBody = SKPhysicsBody(texture: builder.texture, alphaThreshold: 0.0, size: size)
     }
     
     required init?(coder aDecoder: NSCoder) {
