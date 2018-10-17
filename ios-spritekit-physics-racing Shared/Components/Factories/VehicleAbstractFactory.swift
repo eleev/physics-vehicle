@@ -8,6 +8,10 @@
 
 import SpriteKit
 
+enum VehicleFactoryError: Error {
+    case couldNotProdicePhysicsWheel(String)
+}
+
 struct VehcileAbstractFactory {
     
     // MARK: - Properties
@@ -18,35 +22,65 @@ struct VehcileAbstractFactory {
     
     // MARK: - Methods
     
-    func propduce(type: VehicleType, at position: CGPoint) -> Vehicle {
+    func produce(type: VehicleType, at position: CGPoint) throws -> Vehicle {
+        // Prepare Chasis
         let chasis = chasisFactory.produce(of: type, at: position)
-        let leftWheel = produce(type: type,
-                at: position,
-                using: chasis,
-                shockPostOffset: <#T##CGPoint#>,
-                shockPostPosition: <#T##CGPoint#>,
-                springAttachmentPoint: <#T##CGPoint#>)
         
-        let rightWheel = produce(type: type,
-                                 at: position,
-                                 using: chasis,
-                                 shockPostOffset: <#T##CGPoint#>,
-                                 shockPostPosition: <#T##CGPoint#>,
-                                 springAttachmentPoint: <#T##CGPoint#>)
+        // Create Wheels and Engine
+        var wheelBuilder: WheelsLocationBuilder!
+        var engine: Engine
         
-        let vehicle = Vehicle(position: position, chasis: chasis, wheels: [leftWheel, rightWheel])
-        return vehicle
+        switch type {
+        case .jeep:
+            wheelBuilder = JeepWheelsLocationBuilder(chasis: chasis)
+            engine = .jeepStandard
+        case .humvee:
+            wheelBuilder = HumveeWheelsLocationBuilder(chasis: chasis)
+            engine = .humvee
+        }
+        var wheels = [PhysicsWheel]()
+        
+        for wheel in wheelBuilder.locations {
+            guard let physicsWheel = produce(type: type,
+                    at: wheel.wheelLocation,
+                    using: chasis,
+                    shockPostPosition: wheel.shockPostLocation,
+                    springAttachmentPoint: wheel.springAttachmentLocation) else {
+                        print(#file, #line, #function, "Could not create a PhysicsWheel")
+                        continue
+            }
+            wheels += [physicsWheel]
+        }
+        
+        // Finally create the Vehicle
+        return Vehicle(position: position,
+                       chasis: chasis,
+                       engine: engine,
+                       wheels: wheels)
     }
     
-    private func produce(type: VehicleType, at position: CGPoint, using chasis: ChasisNode, shockPostOffset: CGPoint, shockPostPosition: CGPoint, springAttachmentPoint: CGPoint) -> PhysicsWheel {
+    // MARK: - Private producers
+    
+    /// Produces a `PhysicsWheel` instance
+    ///
+    /// - Parameters:
+    ///   - type: is a type of the target vehicle
+    ///   - position: is a spatial location of a vehicle
+    ///   - chasis: is a `Chasis` instance
+    ///   - shockPostOffset: is a `CGPoint` with offsets
+    ///   - shockPostPosition: is a `CGPoint` with offsets
+    ///   - springAttachmentPoint: is a `CGPoint` with offsets
+    /// - Returns: a fully constructed `PhysicsWheel` instance
+    private func produce(type: VehicleType, at position: CGPoint, using chasis: ChasisNode, shockPostPosition: CGPoint, springAttachmentPoint: CGPoint) -> PhysicsWheel? {
         
         let wheelNode = wheelFactory.produce(of: type, at: position)
-        let suspension = suspensionFactory.produce(of: type,
+        guard let suspension = suspensionFactory.produce(of: type,
                                                    wheelNode: wheelNode,
                                                    chasis: chasis,
-                                                   shockPostOffset: shockPostOffset,
                                                    shockPostPosiiton: shockPostPosition,
-                                                   springAttachmentPoint: springAttachmentPoint)
+                                                   springAttachmentPoint: springAttachmentPoint) else {
+                                                    return nil
+        }
         let physicsWheel = wheelFactory.produce(with: wheelNode, using: suspension)
         return physicsWheel
     }
