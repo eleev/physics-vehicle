@@ -14,7 +14,6 @@ protocol WheelSuspensionBuilder {
     var wheelOffset: CGPoint { get }
     var shockPostColor: SKColor { get }
     var shockPostSize: CGSize { get }
-    var shockPostOffset: CGPoint { get }
     var shockPostPosition: CGPoint { get }
     var slideLoweLimit: CGFloat { get }
     var springAttachmentPoint: CGPoint { get }
