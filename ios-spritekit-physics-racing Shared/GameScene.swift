@@ -12,7 +12,7 @@ class GameScene: SKScene {
 
     // MARK: - Properties
     
-    var car: VehicleProtocol!
+    var car: Vehicle!
     
     var hudNode: SKNode!
     var cameraNode: SKCameraNode!
@@ -62,21 +62,17 @@ class GameScene: SKScene {
         
         let spawnPosition = childNode(withName: "//Spawn Position")
         
-//        car = VehicleJeep(position: spawnPosition?.position ?? .zero)
-        car = VehicleHumvee(position: spawnPosition?.position ?? .zero)
-        addChild(car as! SKNode)
-        
-        car.joints.forEach { joint in
-            self.physicsWorld.add(joint)
-        }
-        
+        let carFactory = VehcileAbstractFactory()
+        car = try! carFactory.produce(type: .jeep, at: spawnPosition?.position ?? .zero)
+        addChild(car)
+        car.joints.forEach {self.physicsWorld.add($0) }
         
         // Constraint the camera to follow the car
         let zeroDistance = SKRange(constantValue: 0)
         let playerConstraint = SKConstraint.distance(zeroDistance, to: car.chasis)
         camera?.constraints = [playerConstraint]
-        camera?.xScale = 1.0
-        camera?.yScale = 1.0
+        camera?.xScale = 1.25
+        camera?.yScale = 1.25
         
         #if os(iOS)
         if UIDevice().userInterfaceIdiom == .phone {
@@ -105,18 +101,18 @@ class GameScene: SKScene {
         // Called before each frame is rendered
         if isContinious {
             if isForward {
-                car.applyForwardImpulse()
+                car.moveForward()
             }
             if isBackward {
-                car.applyBackwardImpulse()
+                car.moveBackward()
             }
             
             if isLeft {
-                car.applyLeftTilt()
+                car.leftTilt()
             }
             
             if isRight {
-                car.applyRightTilt()
+                car.rightTilt()
             }
         }
     }
