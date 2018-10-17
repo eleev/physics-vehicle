@@ -14,5 +14,4 @@ protocol WheelBuilder {
     var zPostiion: CGFloat { get }
     var position: CGPoint { get }
     var allowsRotation: Bool { get }
-    var offset: CGPoint { get }
 }
