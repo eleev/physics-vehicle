@@ -12,15 +12,17 @@ class Vehicle: SKNode {
     
     // MARK: - Properties
     
-    private var joints: [SKPhysicsJoint]
-    private var chasis: ChasisNode
-    private var wheels: [PhysicsWheel]
+    private(set) var joints: [SKPhysicsJoint]
+    private(set) var chasis: ChasisNode
+    private(set) var wheels: [PhysicsWheel]
+    private(set) var engine: Engine
     
     // MARK: - Initializers
     
-    init(position: CGPoint, chasis: ChasisNode, wheels: [PhysicsWheel]) {
+    init(position: CGPoint, chasis: ChasisNode, engine: Engine, wheels: [PhysicsWheel]) {
         joints = []
         self.wheels = wheels
+        self.engine = engine
         self.chasis = chasis
         
         for wheel in wheels {
@@ -48,11 +50,13 @@ class Vehicle: SKNode {
     }
     
     func moveForward() {
-        move(impulse: CGVector(dx: 32, dy: 0), angularImpulse: -0.01)
+        // 32
+        move(impulse: CGVector(dx: engine.forwardPower(), dy: 0), angularImpulse: -0.01)
     }
     
     func moveBackward() {
-        move(impulse: CGVector(dx: -10, dy: 0), angularImpulse: 0.01)
+        // -10
+        move(impulse: CGVector(dx: engine.backwardPower(), dy: 0), angularImpulse: 0.01)
     }
     
     func leftTilt() {
