@@ -13,25 +13,32 @@ struct JeepWheelBuilder: WheelBuilder {
     // MARK: - Properties
     
     var texture: SKTexture {
+        
         let assetName = "car-wheel"
         var texture: SKTexture!
-
+        
         #if os(macOS)
-        texture = SKTexture(image: NSImage(named: assetName)!)
+        guard let image = NSImage(named: assetName) else {
+            fatalError("Could not load NSImage for JeepWheelBuilder")
+        }
+        
+        texture = SKTexture(image: image)
         #endif
         
         #if os(iOS)
-        texture = SKTexture(image: UIImage(named: assetName)!)
+        guard let image = UIImage(named: assetName) else {
+            fatalError("Could not load NSImage for JeepWheelBuilder")
+        }
+        texture = SKTexture(image: image)
         #endif
         
         return texture
     }
-    var position: CGPoint
+    var position: CGPoint 
     
     var size: CGSize            = CGSize(width: 78, height: 78)
     var zPostiion: CGFloat      = 10
     var allowsRotation: Bool    = true
-    var offset: CGPoint         = CGPoint(x: 68, y: 65)
     
     // MARK: - Initializers
     

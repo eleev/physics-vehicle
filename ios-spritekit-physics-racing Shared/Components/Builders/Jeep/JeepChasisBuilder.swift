@@ -12,18 +12,18 @@ struct JeepChasisBuilder: ChasisBuilder {
     
     // MARK: - Properties
     
-    var texture: SKTexture {
+    var texture: SKTexture {        
         let assetName = "car-body"
         var texture: SKTexture!
-        
+
         #if os(macOS)
         texture = SKTexture(image: NSImage(named: assetName)!)
         #endif
-        
+
         #if os(iOS)
         texture = SKTexture(image: UIImage(named: assetName)!)
         #endif
-        
+
         return texture
     }
     var position: CGPoint

@@ -15,18 +15,16 @@ struct JeepWheelSuspensionBuilder: WheelSuspensionBuilder {
     var dapming: CGFloat                = 0.75
     var frequiency: CGFloat             = 5
     var wheelOffset: CGPoint            = CGPoint(x: 0, y: 65)
-    var shockPostColor: SKColor         = .blue
+    var shockPostColor: SKColor         = .clear
     var shockPostSize: CGSize           = CGSize(width: 7, height: 65)
-    var slideLoweLimit: CGFloat         = 5
+    var slideLoweLimit: CGFloat         = 4
     
-    var shockPostOffset: CGPoint
     var shockPostPosition: CGPoint
     var springAttachmentPoint: CGPoint
     
     // MRAK: - Initializers
     
-    init(shockPostOffset: CGPoint, shockPostPosition: CGPoint, springAttachmentPoint: CGPoint) {
-        self.shockPostOffset = shockPostOffset
+    init(shockPostPosition: CGPoint, springAttachmentPoint: CGPoint) {
         self.shockPostPosition = shockPostPosition
         self.springAttachmentPoint = springAttachmentPoint
     }
