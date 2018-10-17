@@ -17,7 +17,7 @@ struct WheelFactory {
         case .jeep:
             builder = JeepWheelBuilder(position: position)
         case .humvee:
-            fatalError()
+            builder = HumveeWheelBuilder(position: position)
         }
         return WheelNode(builder: builder)
     }
