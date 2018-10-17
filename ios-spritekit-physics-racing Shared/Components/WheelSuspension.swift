@@ -26,8 +26,7 @@ struct WheelSuspension {
         
         guard let bodyPhysics = body.physicsBody, let wheelPhysics = wheel.physicsBody else {
             return nil
-        }
-        
+        }        
         slideJoint = SKPhysicsJointSliding.joint(withBodyA: bodyPhysics,
                                                  bodyB: shockPost.physicsBody!,
                                                  anchor: shockPost.position,
