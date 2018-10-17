@@ -64,6 +64,22 @@
 		A99156BA21736E2200CFB514 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99156B821736E2200CFB514 /* VehicleType.swift */; };
 		A99156BC21736E4B00CFB514 /* VehicleAbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99156BB21736E4B00CFB514 /* VehicleAbstractFactory.swift */; };
 		A99156BD21736E4B00CFB514 /* VehicleAbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99156BB21736E4B00CFB514 /* VehicleAbstractFactory.swift */; };
+		A9FE2A9F21774A0700383D0F /* WheelsLocationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2A9E21774A0700383D0F /* WheelsLocationBuilder.swift */; };
+		A9FE2AA021774A0700383D0F /* WheelsLocationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2A9E21774A0700383D0F /* WheelsLocationBuilder.swift */; };
+		A9FE2AA221774AAC00383D0F /* JeepWheelsLocationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2AA121774AAC00383D0F /* JeepWheelsLocationBuilder.swift */; };
+		A9FE2AA321774AAC00383D0F /* JeepWheelsLocationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2AA121774AAC00383D0F /* JeepWheelsLocationBuilder.swift */; };
+		A9FE2AA521774E3A00383D0F /* WheelLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2AA421774E3A00383D0F /* WheelLocation.swift */; };
+		A9FE2AA621774E3A00383D0F /* WheelLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2AA421774E3A00383D0F /* WheelLocation.swift */; };
+		A9FE2AA92177608600383D0F /* HumveeWheelSuspensionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2AA82177608600383D0F /* HumveeWheelSuspensionBuilder.swift */; };
+		A9FE2AAA2177608600383D0F /* HumveeWheelSuspensionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2AA82177608600383D0F /* HumveeWheelSuspensionBuilder.swift */; };
+		A9FE2AAC217760EA00383D0F /* HumveeWheelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2AAB217760EA00383D0F /* HumveeWheelBuilder.swift */; };
+		A9FE2AAD217760EA00383D0F /* HumveeWheelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2AAB217760EA00383D0F /* HumveeWheelBuilder.swift */; };
+		A9FE2AAF2177611600383D0F /* HumveeChasisBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2AAE2177611600383D0F /* HumveeChasisBuilder.swift */; };
+		A9FE2AB02177611600383D0F /* HumveeChasisBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2AAE2177611600383D0F /* HumveeChasisBuilder.swift */; };
+		A9FE2AB22177618E00383D0F /* HumveeWheelsLocationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2AB12177618E00383D0F /* HumveeWheelsLocationBuilder.swift */; };
+		A9FE2AB32177618E00383D0F /* HumveeWheelsLocationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2AB12177618E00383D0F /* HumveeWheelsLocationBuilder.swift */; };
+		A9FE2AB5217765DE00383D0F /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2AB4217765DE00383D0F /* Engine.swift */; };
+		A9FE2AB6217765DE00383D0F /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE2AB4217765DE00383D0F /* Engine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +119,14 @@
 		A99156B521736D5300CFB514 /* WheelSuspension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelSuspension.swift; sourceTree = "<group>"; };
 		A99156B821736E2200CFB514 /* VehicleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleType.swift; sourceTree = "<group>"; };
 		A99156BB21736E4B00CFB514 /* VehicleAbstractFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAbstractFactory.swift; sourceTree = "<group>"; };
+		A9FE2A9E21774A0700383D0F /* WheelsLocationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelsLocationBuilder.swift; sourceTree = "<group>"; };
+		A9FE2AA121774AAC00383D0F /* JeepWheelsLocationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeepWheelsLocationBuilder.swift; sourceTree = "<group>"; };
+		A9FE2AA421774E3A00383D0F /* WheelLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelLocation.swift; sourceTree = "<group>"; };
+		A9FE2AA82177608600383D0F /* HumveeWheelSuspensionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumveeWheelSuspensionBuilder.swift; sourceTree = "<group>"; };
+		A9FE2AAB217760EA00383D0F /* HumveeWheelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumveeWheelBuilder.swift; sourceTree = "<group>"; };
+		A9FE2AAE2177611600383D0F /* HumveeChasisBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumveeChasisBuilder.swift; sourceTree = "<group>"; };
+		A9FE2AB12177618E00383D0F /* HumveeWheelsLocationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumveeWheelsLocationBuilder.swift; sourceTree = "<group>"; };
+		A9FE2AB4217765DE00383D0F /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,10 +150,13 @@
 		A91FCF3121747579000225E5 /* Builders */ = {
 			isa = PBXGroup;
 			children = (
+				A9FE2AA72177606900383D0F /* Humvee */,
 				A91FCF4021747841000225E5 /* Jeep */,
+				A9FE2A9E21774A0700383D0F /* WheelsLocationBuilder.swift */,
 				A91FCF2F21747560000225E5 /* WheelSuspensionBuilder.swift */,
 				A9300AE0216E5ECF00AF1C06 /* WheelBuilder.swift */,
 				A99156A62173422800CFB514 /* ChasisBuilder.swift */,
+				A9FE2AA421774E3A00383D0F /* WheelLocation.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -151,6 +178,7 @@
 				A91FCF3D2174783D000225E5 /* JeepWheelSuspensionBuilder.swift */,
 				A91FCF41217479AC000225E5 /* JeepWheelBuilder.swift */,
 				A91FCF4421747AE5000225E5 /* JeepChasisBuilder.swift */,
+				A9FE2AA121774AAC00383D0F /* JeepWheelsLocationBuilder.swift */,
 			);
 			path = Jeep;
 			sourceTree = "<group>";
@@ -166,6 +194,7 @@
 				A99156B521736D5300CFB514 /* WheelSuspension.swift */,
 				A99156B821736E2200CFB514 /* VehicleType.swift */,
 				A91FCF47217484BA000225E5 /* WheelNode.swift */,
+				A9FE2AB4217765DE00383D0F /* Engine.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -190,9 +219,7 @@
 				A987EC21210E124700D0C07E /* GameScene.sks */,
 				A987EC1E210E123900D0C07E /* GameScene.swift */,
 				A987EC24210E125F00D0C07E /* Assets.xcassets */,
-				A987EC27210E130900D0C07E /* VehicleJeep.swift */,
-				A9062576212052BE00324732 /* VehicleHumvee.swift */,
-				A987EC1B210D9DAE00D0C07E /* VehicleProtocol.swift */,
+				A9FE2AB72177711200383D0F /* Legacy */,
 			);
 			path = "ios-spritekit-physics-racing Shared";
 			sourceTree = "<group>";
@@ -235,6 +262,27 @@
 				A987EC2B210E133300D0C07E /* TrigonometryExtnesions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A9FE2AA72177606900383D0F /* Humvee */ = {
+			isa = PBXGroup;
+			children = (
+				A9FE2AA82177608600383D0F /* HumveeWheelSuspensionBuilder.swift */,
+				A9FE2AAB217760EA00383D0F /* HumveeWheelBuilder.swift */,
+				A9FE2AAE2177611600383D0F /* HumveeChasisBuilder.swift */,
+				A9FE2AB12177618E00383D0F /* HumveeWheelsLocationBuilder.swift */,
+			);
+			path = Humvee;
+			sourceTree = "<group>";
+		};
+		A9FE2AB72177711200383D0F /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				A987EC27210E130900D0C07E /* VehicleJeep.swift */,
+				A9062576212052BE00324732 /* VehicleHumvee.swift */,
+				A987EC1B210D9DAE00D0C07E /* VehicleProtocol.swift */,
+			);
+			path = Legacy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,21 +395,29 @@
 			files = (
 				A91FCF3E2174783D000225E5 /* JeepWheelSuspensionBuilder.swift in Sources */,
 				A99156B021736D2D00CFB514 /* ChasisNode.swift in Sources */,
+				A9FE2AB22177618E00383D0F /* HumveeWheelsLocationBuilder.swift in Sources */,
 				A99156AD21736D1300CFB514 /* Vehicle.swift in Sources */,
 				A987EC28210E130900D0C07E /* VehicleJeep.swift in Sources */,
+				A9FE2AA521774E3A00383D0F /* WheelLocation.swift in Sources */,
 				A91FCF48217484BA000225E5 /* WheelNode.swift in Sources */,
 				A91FCF4521747AE5000225E5 /* JeepChasisBuilder.swift in Sources */,
 				A99156B321736D4200CFB514 /* PhysicsWheel.swift in Sources */,
 				A99156A72173422800CFB514 /* ChasisBuilder.swift in Sources */,
+				A9FE2AAC217760EA00383D0F /* HumveeWheelBuilder.swift in Sources */,
 				A99156BC21736E4B00CFB514 /* VehicleAbstractFactory.swift in Sources */,
 				A9300AE1216E5ECF00AF1C06 /* WheelBuilder.swift in Sources */,
 				A987EBF2210D9B2F00D0C07E /* GameViewController.swift in Sources */,
+				A9FE2AA92177608600383D0F /* HumveeWheelSuspensionBuilder.swift in Sources */,
 				A987EC1C210D9DAE00D0C07E /* VehicleProtocol.swift in Sources */,
+				A9FE2AB5217765DE00383D0F /* Engine.swift in Sources */,
 				A987EC1F210E123900D0C07E /* GameScene.swift in Sources */,
 				A91FCF3A217475BC000225E5 /* WheelFactory.swift in Sources */,
+				A9FE2A9F21774A0700383D0F /* WheelsLocationBuilder.swift in Sources */,
+				A9FE2AA221774AAC00383D0F /* JeepWheelsLocationBuilder.swift in Sources */,
 				A91FCF3021747560000225E5 /* WheelSuspensionBuilder.swift in Sources */,
 				A99156B621736D5300CFB514 /* WheelSuspension.swift in Sources */,
 				A91FCF3421747592000225E5 /* ChasisFactory.swift in Sources */,
+				A9FE2AAF2177611600383D0F /* HumveeChasisBuilder.swift in Sources */,
 				A987EC2C210E133300D0C07E /* TrigonometryExtnesions.swift in Sources */,
 				A91FCF36217475A2000225E5 /* SuspentionFactory.swift in Sources */,
 				A9062577212052BE00324732 /* VehicleHumvee.swift in Sources */,
@@ -377,21 +433,29 @@
 			files = (
 				A91FCF3F2174783D000225E5 /* JeepWheelSuspensionBuilder.swift in Sources */,
 				A99156B121736D2D00CFB514 /* ChasisNode.swift in Sources */,
+				A9FE2AB32177618E00383D0F /* HumveeWheelsLocationBuilder.swift in Sources */,
 				A91FCF37217475A6000225E5 /* ChasisFactory.swift in Sources */,
 				A99156AE21736D2000CFB514 /* Vehicle.swift in Sources */,
+				A9FE2AA621774E3A00383D0F /* WheelLocation.swift in Sources */,
 				A91FCF49217484BA000225E5 /* WheelNode.swift in Sources */,
 				A91FCF4621747AE5000225E5 /* JeepChasisBuilder.swift in Sources */,
 				A987EC29210E130900D0C07E /* VehicleJeep.swift in Sources */,
 				A99156B421736D4200CFB514 /* PhysicsWheel.swift in Sources */,
+				A9FE2AAD217760EA00383D0F /* HumveeWheelBuilder.swift in Sources */,
 				A99156A82173423000CFB514 /* ChasisBuilder.swift in Sources */,
 				A91FCF3C217475D3000225E5 /* WheelSuspensionBuilder.swift in Sources */,
 				A99156BD21736E4B00CFB514 /* VehicleAbstractFactory.swift in Sources */,
+				A9FE2AAA2177608600383D0F /* HumveeWheelSuspensionBuilder.swift in Sources */,
 				A987EC03210D9B2F00D0C07E /* GameViewController.swift in Sources */,
+				A9FE2AB6217765DE00383D0F /* Engine.swift in Sources */,
 				A987EC20210E123900D0C07E /* GameScene.swift in Sources */,
 				A9300AE6216E5F5300AF1C06 /* VehicleProtocol.swift in Sources */,
+				A9FE2AA021774A0700383D0F /* WheelsLocationBuilder.swift in Sources */,
+				A9FE2AA321774AAC00383D0F /* JeepWheelsLocationBuilder.swift in Sources */,
 				A987EC2D210E133300D0C07E /* TrigonometryExtnesions.swift in Sources */,
 				A91FCF38217475A8000225E5 /* SuspentionFactory.swift in Sources */,
 				A99156B721736D5300CFB514 /* WheelSuspension.swift in Sources */,
+				A9FE2AB02177611600383D0F /* HumveeChasisBuilder.swift in Sources */,
 				A9062578212052BE00324732 /* VehicleHumvee.swift in Sources */,
 				A987EC01210D9B2F00D0C07E /* AppDelegate.swift in Sources */,
 				A99156BA21736E2200CFB514 /* VehicleType.swift in Sources */,
