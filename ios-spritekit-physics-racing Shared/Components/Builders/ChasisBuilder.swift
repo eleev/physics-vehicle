@@ -13,5 +13,7 @@ protocol ChasisBuilder {
     var size: CGSize { get }
     var zPosition: CGFloat { get }
     var position: CGPoint { get }
+    
+    var density: CGFloat { get }
 }
 

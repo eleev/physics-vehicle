@@ -9,9 +9,16 @@
 import SpriteKit
 
 protocol WheelBuilder {
+    
+    // MARK: - Properties
+    
     var texture: SKTexture { get }
     var size: CGSize { get }
     var zPostiion: CGFloat { get }
     var position: CGPoint { get }
+    
+    // MARK: - Physics properties
+    
     var allowsRotation: Bool { get }
+    var friction: CGFloat { get }
 }
