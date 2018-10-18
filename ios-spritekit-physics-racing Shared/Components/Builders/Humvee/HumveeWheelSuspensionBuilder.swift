@@ -12,11 +12,11 @@ struct HumveeWheelSuspensionBuilder: WheelSuspensionBuilder {
     
     // MARK: - Properties
     
-    var dapming: CGFloat                = 0.5
+    var dapming: CGFloat                = 0.3
     var frequiency: CGFloat             = 6
-    var wheelOffset: CGPoint            = CGPoint(x: 0, y: 95)
+    var wheelOffset: CGPoint            = CGPoint(x: 0, y: 100)
     var shockPostColor: SKColor         = .clear
-    var shockPostSize: CGSize           = CGSize(width: 7, height: 95)
+    var shockPostSize: CGSize           = CGSize(width: 15, height: 100)
     var slideLoweLimit: CGFloat         = 5
     
     var shockPostPosition: CGPoint

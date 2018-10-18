@@ -30,7 +30,8 @@ struct HumveeChasisBuilder: ChasisBuilder {
     
     var size: CGSize        = CGSize(width: 400, height: 197.43)
     var zPosition: CGFloat  = 8
-    
+    var density: CGFloat    = 2.0
+
     // MARK: - Initializers
     
     init(position: CGPoint) {

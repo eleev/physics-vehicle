@@ -6,7 +6,7 @@
 //  Copyright © 2018 Astemir Eleev. All rights reserved.
 //
 
-import Foundation
+import CoreGraphics
 
 struct HumveeWheelsLocationBuilder: WheelsLocationBuilder {
     
@@ -24,19 +24,19 @@ struct HumveeWheelsLocationBuilder: WheelsLocationBuilder {
         let chasisLeftHalfX = chasis.position.x - chasisHalfX
         let chasisRightHalfX = chasis.position.x + chasisHalfX
         
-        let leftWheelPosition = CGPoint(x: chasisLeftHalfX + 58, y: chasis.position.y - 95)
-        let rightWheelPosition = CGPoint(x: chasisRightHalfX - 72, y: chasis.position.y - 95)
+        let leftWheelPosition = CGPoint(x: chasisLeftHalfX + 58, y: chasis.position.y - 100)
+        let rightWheelPosition = CGPoint(x: chasisRightHalfX - 72, y: chasis.position.y - 100)
         
-        let chasisShockY = chasis.position.y - (95 / 2)
+        let chasisShockY = chasis.position.y - (100 / 2)
         
         
         let leftWheel = WheelLocation.init(wheelLocation: leftWheelPosition,
-                                           shockPostLocation: CGPoint(x: leftWheelPosition.x + 10, y: chasisShockY),
-                                           springAttachmentLocation: CGPoint(x: leftWheelPosition.x + 10, y: chasis.position.y))
+                                           shockPostLocation: CGPoint(x: leftWheelPosition.x, y: chasisShockY),
+                                           springAttachmentLocation: CGPoint(x: leftWheelPosition.x, y: chasis.position.y))
         
         let rightWheel = WheelLocation.init(wheelLocation: rightWheelPosition,
-                                            shockPostLocation: CGPoint(x: rightWheelPosition.x + 10, y: chasisShockY),
-                                            springAttachmentLocation: CGPoint(x: rightWheelPosition.x + 10, y: chasis.position.y))
+                                            shockPostLocation: CGPoint(x: rightWheelPosition.x , y: chasisShockY),
+                                            springAttachmentLocation: CGPoint(x: rightWheelPosition.x, y: chasis.position.y))
         locations += [leftWheel, rightWheel]
     }
 }
