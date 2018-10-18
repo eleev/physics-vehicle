@@ -30,7 +30,8 @@ struct JeepChasisBuilder: ChasisBuilder {
     
     var size: CGSize        = CGSize(width: 400, height: 112.3)
     var zPosition: CGFloat  = 8
-    
+    var density: CGFloat    = 2
+
     // MARK: - Initializers
     
     init(position: CGPoint) {
