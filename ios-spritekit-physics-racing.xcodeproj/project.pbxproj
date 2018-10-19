@@ -374,6 +374,7 @@
 				TargetAttributes = {
 					A987EBEB210D9B2F00D0C07E = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					A987EBFD210D9B2F00D0C07E = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -674,7 +675,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-physics-racing";
 				PRODUCT_NAME = "ios-spritekit-physics-racing";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -695,7 +696,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-physics-racing";
 				PRODUCT_NAME = "ios-spritekit-physics-racing";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
