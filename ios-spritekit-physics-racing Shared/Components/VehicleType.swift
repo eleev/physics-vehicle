@@ -11,5 +11,6 @@ import Foundation
 enum VehicleType {
     case jeep
     case humvee
+    case schoolBus
 }
 
