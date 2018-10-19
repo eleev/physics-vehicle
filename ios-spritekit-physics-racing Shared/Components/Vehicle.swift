@@ -54,6 +54,10 @@ class Vehicle: SKNode {
         move(impulse: CGVector(dx: engine.forwardPower(), dy: 0), angularImpulse: -0.01)
     }
     
+    func `break`() {
+        breakMovement()
+    }
+    
     func moveBackward() {
         // -10
         move(impulse: CGVector(dx: engine.backwardPower(), dy: 0), angularImpulse: 0.01)
@@ -82,6 +86,19 @@ class Vehicle: SKNode {
         
         for wheel in wheels {
             wheel.sprite.physicsBody?.applyAngularImpulse(angularImpulse)
+            wheel.sprite.physicsBody?.applyForce(CGVector.init(dx: 0, dy: -9.8))
+            
+            let velocity = wheel.sprite.physicsBody?.velocity
+            
+            let forwardSpeed = engine.forwardSpeed()
+            if velocity?.dx ?? 0.0 > forwardSpeed {
+                wheel.sprite.physicsBody?.velocity.dx = forwardSpeed
+            }
+            
+            let backwardSpeed = engine.backwardSpeed()
+            if velocity?.dx ?? 0.0 < backwardSpeed {
+                wheel.sprite.physicsBody?.velocity.dx = backwardSpeed
+            }
         }
     }
     
@@ -94,5 +111,20 @@ class Vehicle: SKNode {
         let forceFactor: CGFloat = 1200
         
         chasis.physicsBody?.applyForce(CGVector(dx: x * forceFactor, dy: y * forceFactor), at: convertedPoint)
+    }
+    
+    private func breakMovement() {
+        print(#function)
+        
+        for wheel in wheels {
+            wheel.sprite.physicsBody?.applyForce(CGVector.init(dx: 0, dy: -9.8 * 350))
+            
+            wheel.sprite.physicsBody?.angularVelocity /= CGFloat.greatestFiniteMagnitude
+            
+//            wheel.sprite.physicsBody?.velocity = .zero
+            
+            let velocity = wheel.sprite.physicsBody?.velocity
+            wheel.sprite.physicsBody?.velocity = CGVector(dx: velocity?.dx ?? 1.0 / CGFloat.greatestFiniteMagnitude, dy: velocity?.dy ?? 1.0 / CGFloat.greatestFiniteMagnitude)
+        }
     }
 }
