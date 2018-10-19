@@ -209,7 +209,7 @@
 			path = Jeep;
 			sourceTree = "<group>";
 		};
-		A9300ADF216E5EBB00AF1C06 /* Components */ = {
+		A9300ADF216E5EBB00AF1C06 /* Vehicle Components */ = {
 			isa = PBXGroup;
 			children = (
 				A91FCF3221747586000225E5 /* Factories */,
@@ -223,7 +223,7 @@
 				A9FE2AB4217765DE00383D0F /* Engine.swift */,
 				A95C9EEF2178DAC50089548C /* EngineConfiguration.swift */,
 			);
-			path = Components;
+			path = "Vehicle Components";
 			sourceTree = "<group>";
 		};
 		A95C9EF62178DAFD0089548C /* School Bus */ = {
@@ -252,7 +252,7 @@
 		A987EBE3210D9B2E00D0C07E /* ios-spritekit-physics-racing Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A9300ADF216E5EBB00AF1C06 /* Components */,
+				A9300ADF216E5EBB00AF1C06 /* Vehicle Components */,
 				A987EC2A210E132100D0C07E /* Extensions */,
 				A987EBE4210D9B2E00D0C07E /* Actions.sks */,
 				A987EC21210E124700D0C07E /* GameScene.sks */,
