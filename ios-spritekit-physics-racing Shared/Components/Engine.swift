@@ -7,20 +7,54 @@
 //
 
 import Foundation
+import CoreGraphics
 
-enum Engine: Int {
-    case jeepStandard = 15
-    case jeepPowered = 25
-    case humvee = 19
+enum Engine {
+    case jeepStandard(EngineConfiguration)
+    case jeepPowered(EngineConfiguration)
+    case humvee(EngineConfiguration)
+    case schoolBus(EngineConfiguration)
 }
 
 extension Engine {
-    
+
     func forwardPower() -> Int {
-        return self.rawValue
+        switch self {
+        case .humvee(let configuration),
+             .jeepPowered(let configuration),
+             .jeepStandard(let configuration),
+             .schoolBus(let configuration):
+            return configuration.horsepower
+        }
     }
     
     func backwardPower() -> Int {
-        return -(self.rawValue / 3)
+        switch self {
+        case .humvee(let configuration),
+             .jeepPowered(let configuration),
+             .jeepStandard(let configuration),
+             .schoolBus(let configuration):
+            return -(configuration.horsepower / 3)
+        }
+    }
+    
+    func forwardSpeed() -> CGFloat {
+        switch self {
+        case .humvee(let configuration),
+             .jeepPowered(let configuration),
+             .jeepStandard(let configuration),
+             .schoolBus(let configuration):
+            return configuration.forwardSpeed
+        }
+    }
+    
+    func backwardSpeed() -> CGFloat {
+        switch self {
+        case .humvee(let configuration),
+             .jeepPowered(let configuration),
+             .jeepStandard(let configuration),
+             .schoolBus(let configuration):
+            return configuration.backwardSpeed
+        }
     }
 }
