@@ -27,6 +27,7 @@ class GameScene: SKScene {
     var isBackward = false
     var isLeft = false
     var isRight = false
+    var isBreak = false
     
     // MARK: - Methods
     
@@ -63,7 +64,7 @@ class GameScene: SKScene {
         let spawnPosition = childNode(withName: "//Spawn Position")
         
         let carFactory = VehcileAbstractFactory()
-        car = try! carFactory.produce(type: .jeep, at: spawnPosition?.position ?? .zero)
+        car = try! carFactory.produce(type: .humvee, at: spawnPosition?.position ?? .zero)
         addChild(car)
         car.joints.forEach {self.physicsWorld.add($0) }
         
@@ -114,6 +115,10 @@ class GameScene: SKScene {
             if isRight {
                 car.rightTilt()
             }
+            
+            if isBreak {
+                car.break()
+            }
         }
     }
 }
@@ -146,6 +151,9 @@ extension GameScene {
                 if node.name == "Right" {
                     isRight = true
                 }
+                if node.name == "Break" {
+                    isBreak = true
+                }
             }
         }
     }
@@ -154,6 +162,8 @@ extension GameScene {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        isContinious = false
+        
         for touch in touches {
             let location = touch.location(in: self)
             let toucheNodes = nodes(at: location)
@@ -175,11 +185,16 @@ extension GameScene {
                 if node.name == "Right" {
                     isRight = false
                 }
+                if node.name == "Break" {
+                    isBreak = false
+                }
             }
         }
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        isContinious = false
+        
         for touch in touches {
             let location = touch.location(in: self)
             let toucheNodes = nodes(at: location)
@@ -200,6 +215,9 @@ extension GameScene {
                 }
                 if node.name == "Right" {
                     isRight = false
+                }
+                if node.name == "Break" {
+                    isBreak = false
                 }
             }
         }
@@ -222,6 +240,7 @@ extension GameScene {
     static let leftArrow = UInt16(kVK_LeftArrow)
     static let rightArrow = UInt16(kVK_RightArrow)
     static let upArrow = UInt16(kVK_UpArrow)
+    static let backSpace = UInt16(kVK_Space)
     
     // MARK: - Mouse handling
     
@@ -256,6 +275,10 @@ extension GameScene {
         if keyCode == GameScene.downArrow {
             isRight = false
         }
+        
+        if keyCode == GameScene.backSpace {
+            isBreak = false
+        }
     }
 
     override func keyDown(with event: NSEvent) {
@@ -277,6 +300,10 @@ extension GameScene {
         
         if keyCode == GameScene.downArrow {
             isRight = true
+        }
+        
+        if keyCode == GameScene.backSpace {
+            isBreak = true
         }
     }
 
