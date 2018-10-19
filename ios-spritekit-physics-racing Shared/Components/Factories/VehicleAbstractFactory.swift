@@ -33,10 +33,13 @@ struct VehcileAbstractFactory {
         switch type {
         case .jeep:
             wheelBuilder = JeepWheelsLocationBuilder(chasis: chasis)
-            engine = .jeepStandard
+            engine = .jeepStandard(JeepStandardEngineConfiguration())
         case .humvee:
             wheelBuilder = HumveeWheelsLocationBuilder(chasis: chasis)
-            engine = .humvee
+            engine = .humvee(HumveeEngineConfiguration())
+        case .schoolBus:
+            wheelBuilder = SchoolBusWheelsLocationBuilder(chasis: chasis)
+            engine = .schoolBus(SchoolBusEngineConfiguration())
         }
         var wheels = [PhysicsWheel]()
         

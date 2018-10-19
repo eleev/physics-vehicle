@@ -18,6 +18,8 @@ struct WheelFactory {
             builder = JeepWheelBuilder(position: position)
         case .humvee:
             builder = HumveeWheelBuilder(position: position)
+        case .schoolBus:
+            builder = SchoolBusWheelBuilder(position: position)
         }
         return WheelNode(builder: builder)
     }

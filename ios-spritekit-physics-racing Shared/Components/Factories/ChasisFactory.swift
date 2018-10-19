@@ -23,6 +23,8 @@ struct ChasisFactory {
             builder = JeepChasisBuilder(position: position)
         case .humvee:
             builder = HumveeChasisBuilder(position: position)
+        case .schoolBus:
+            builder = SchoolBusChasisBuilder(position: position)
         }
         return ChasisNode(builder: builder)
     }

@@ -18,6 +18,8 @@ struct SuspentionFactory {
             builder = JeepWheelSuspensionBuilder(shockPostPosition: shockPostPosiiton, springAttachmentPoint: springAttachmentPoint)
         case .humvee:
             builder = HumveeWheelSuspensionBuilder(shockPostPosition: shockPostPosiiton, springAttachmentPoint: springAttachmentPoint)
+        case .schoolBus:
+            builder = SchoolBusWheelSuspensionBuilder(shockPostPosition: shockPostPosiiton, springAttachmentPoint: springAttachmentPoint)
         }
         return WheelSuspension(builder: builder, attachmentBody: chasis, attachmentWheel: wheelNode)
     }
