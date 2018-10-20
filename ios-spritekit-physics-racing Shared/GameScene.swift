@@ -64,7 +64,7 @@ class GameScene: SKScene {
         let spawnPosition = childNode(withName: "//Spawn Position")
         
         let carFactory = VehcileAbstractFactory()
-        car = try! carFactory.produce(type: .humvee, at: spawnPosition?.position ?? .zero)
+        car = try! carFactory.produce(type: .balista, at: spawnPosition?.position ?? .zero)
         addChild(car)
         car.joints.forEach {self.physicsWorld.add($0) }
         
@@ -74,6 +74,48 @@ class GameScene: SKScene {
         camera?.constraints = [playerConstraint]
         camera?.xScale = 1.25
         camera?.yScale = 1.25
+        
+        // MARK: - Test Code Starts
+        
+        let ropeNodeStart = childNode(withName: "Rope Node 01")
+        ropeNodeStart?.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 10, height: 10))
+        ropeNodeStart?.physicsBody?.affectedByGravity = false
+        ropeNodeStart?.physicsBody?.isDynamic = false
+        ropeNodeStart?.physicsBody?.mass = 999999
+
+        let ropeNodeEnd = childNode(withName: "Rope Node 02")
+        ropeNodeEnd?.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 10, height: 10))
+        ropeNodeEnd?.physicsBody?.affectedByGravity = false
+        ropeNodeEnd?.physicsBody?.isDynamic = false
+        ropeNodeEnd?.physicsBody?.mass = 999999
+        
+        let ropeNode3 = childNode(withName: "Rope Node 03")
+        ropeNode3?.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 10, height: 10))
+        ropeNode3?.physicsBody?.affectedByGravity = false
+        ropeNode3?.physicsBody?.isDynamic = false
+        
+        let ropeNode4 = childNode(withName: "Rope Node 04")
+        ropeNode4?.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 10, height: 10))
+        ropeNode4?.physicsBody?.affectedByGravity = false
+        ropeNode4?.physicsBody?.isDynamic = false
+        
+        let bridgeNode = RopeNode(with: 28, and: SKTexture(imageNamed: "Ring"))
+        bridgeNode.attach(to: ropeNodeStart!)
+        bridgeNode.anchor(to: ropeNodeEnd!)
+        
+        let bridgeNode2 = RopeNode(with: 35, and: SKTexture(imageNamed: "Ring"))
+        bridgeNode2.attach(to: ropeNode3!)
+        bridgeNode2.anchor(to: ropeNode4!)
+        
+        
+//        let bridgeNode3 = RopeNode(with: 20, and: SKTexture(imageNamed: "Ring"))
+//        bridgeNode3.attach(to: ropeNode3!)
+//        
+//        let bridgeNode4 = RopeNode(with: 20, and: SKTexture(imageNamed: "Ring"))
+//        bridgeNode4.attach(to: ropeNode4!)
+        
+        
+        // MARK: - Test Code Ends
         
         #if os(iOS)
         if UIDevice().userInterfaceIdiom == .phone {
