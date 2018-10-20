@@ -9,7 +9,7 @@
 import CoreGraphics
 
 struct HumveeEngineConfiguration: EngineConfiguration {
-    var horsepower: Int = 70
-    var forwardSpeed: CGFloat = 780
-    var backwardSpeed: CGFloat = -550
+    var horsepower: Int = 60
+    var forwardSpeed: CGFloat = 880
+    var backwardSpeed: CGFloat = -650
 }
