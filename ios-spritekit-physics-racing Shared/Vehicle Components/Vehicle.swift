@@ -108,7 +108,7 @@ class Vehicle: SKNode {
         let angle = chasis.zRotation - CGFloat.pi / 2
         let x = cos(angle)
         let y = sin(angle)
-        let forceFactor: CGFloat = 1200
+        let forceFactor: CGFloat = 1500
         
         chasis.physicsBody?.applyForce(CGVector(dx: x * forceFactor, dy: y * forceFactor), at: convertedPoint)
     }
