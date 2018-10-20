@@ -40,6 +40,9 @@ struct VehcileAbstractFactory {
         case .schoolBus:
             wheelBuilder = SchoolBusWheelsLocationBuilder(chasis: chasis)
             engine = .schoolBus(SchoolBusEngineConfiguration())
+        case .balista:
+            wheelBuilder = BalistaWheelsLocationBuilder(chasis: chasis)
+            engine = .balista(BalistaEngineConfiguration())
         }
         var wheels = [PhysicsWheel]()
         
