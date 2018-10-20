@@ -14,6 +14,7 @@ enum Engine {
     case jeepPowered(EngineConfiguration)
     case humvee(EngineConfiguration)
     case schoolBus(EngineConfiguration)
+    case balista(EngineConfiguration)
 }
 
 extension Engine {
@@ -23,7 +24,8 @@ extension Engine {
         case .humvee(let configuration),
              .jeepPowered(let configuration),
              .jeepStandard(let configuration),
-             .schoolBus(let configuration):
+             .schoolBus(let configuration),
+             .balista(let configuration):
             return configuration.horsepower
         }
     }
@@ -33,7 +35,8 @@ extension Engine {
         case .humvee(let configuration),
              .jeepPowered(let configuration),
              .jeepStandard(let configuration),
-             .schoolBus(let configuration):
+             .schoolBus(let configuration),
+             .balista(let configuration):
             return -(configuration.horsepower / 3)
         }
     }
@@ -43,7 +46,8 @@ extension Engine {
         case .humvee(let configuration),
              .jeepPowered(let configuration),
              .jeepStandard(let configuration),
-             .schoolBus(let configuration):
+             .schoolBus(let configuration),
+             .balista(let configuration):
             return configuration.forwardSpeed
         }
     }
@@ -53,7 +57,8 @@ extension Engine {
         case .humvee(let configuration),
              .jeepPowered(let configuration),
              .jeepStandard(let configuration),
-             .schoolBus(let configuration):
+             .schoolBus(let configuration),
+             .balista(let configuration):
             return configuration.backwardSpeed
         }
     }

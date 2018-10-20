@@ -12,5 +12,6 @@ enum VehicleType {
     case jeep
     case humvee
     case schoolBus
+    case balista
 }
 
