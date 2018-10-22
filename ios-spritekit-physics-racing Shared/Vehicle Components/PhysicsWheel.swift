@@ -14,11 +14,13 @@ struct PhysicsWheel {
     
     private(set) var sprite: WheelNode
     private(set) var suspension: WheelSuspension
+    private(set) var isBreakable: Bool
     
     // MARK: - Initializers
     
-    init(node: WheelNode, suspension: WheelSuspension) {
+    init(node: WheelNode, suspension: WheelSuspension, isBreakable: Bool = true) {
         self.sprite = node
         self.suspension = suspension
+        self.isBreakable = isBreakable
     }
 }
