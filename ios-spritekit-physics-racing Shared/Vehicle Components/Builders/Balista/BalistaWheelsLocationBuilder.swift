@@ -50,19 +50,19 @@ struct BalistaWheelsLocationBuilder: WheelsLocationBuilder {
                                            shockPostLocation:
             CGPoint(x: midWheelPosition.x, y: chasisShockY),
                                            springAttachmentLocation:
-            CGPoint(x: midWheelPosition.x, y: chasis.position.y))
+            CGPoint(x: midWheelPosition.x, y: chasis.position.y), isBreakable: false)
         
         let rightWheel = WheelLocation.init(wheelLocation: rightWheelPosition,
                                             shockPostLocation:
             CGPoint(x: rightWheelPosition.x , y: chasisShockY),
                                             springAttachmentLocation:
-            CGPoint(x: rightWheelPosition.x, y: chasis.position.y))
+            CGPoint(x: rightWheelPosition.x, y: chasis.position.y), isBreakable: false)
         
         let rightMidWheel = WheelLocation.init(wheelLocation: rightMidWheelPosition,
                                             shockPostLocation:
             CGPoint(x: rightMidWheelPosition.x , y: chasisShockY),
                                             springAttachmentLocation:
-            CGPoint(x: rightMidWheelPosition.x, y: chasis.position.y))
+            CGPoint(x: rightMidWheelPosition.x, y: chasis.position.y), isBreakable: false)
         
         locations += [leftWheel, leftMidWheel, midWheel, rightMidWheel, rightWheel]
     }

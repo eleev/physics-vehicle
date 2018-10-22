@@ -9,7 +9,7 @@
 import CoreGraphics
 
 struct BalistaEngineConfiguration: EngineConfiguration {
-    var horsepower: Int = 35
-    var forwardSpeed: CGFloat = 550
+    var horsepower: Int = 30
+    var forwardSpeed: CGFloat = 500
     var backwardSpeed: CGFloat = -550
 }
