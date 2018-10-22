@@ -26,7 +26,7 @@ struct WheelFactory {
         return WheelNode(builder: builder)
     }
     
-    func produce(with node: WheelNode, using suspension: WheelSuspension) -> PhysicsWheel {
-        return PhysicsWheel(node: node, suspension: suspension)
+    func produce(with node: WheelNode, using suspension: WheelSuspension, isBreakable: Bool) -> PhysicsWheel {
+        return PhysicsWheel(node: node, suspension: suspension, isBreakable: isBreakable)
     }
 }

@@ -51,7 +51,8 @@ struct VehcileAbstractFactory {
                     at: wheel.wheelLocation,
                     using: chasis,
                     shockPostPosition: wheel.shockPostLocation,
-                    springAttachmentPoint: wheel.springAttachmentLocation) else {
+                    springAttachmentPoint: wheel.springAttachmentLocation,
+                    isBreakable: wheel.isBreakable) else {
                         print(#file, #line, #function, "Could not create a PhysicsWheel")
                         continue
             }
@@ -77,7 +78,7 @@ struct VehcileAbstractFactory {
     ///   - shockPostPosition: is a `CGPoint` with offsets
     ///   - springAttachmentPoint: is a `CGPoint` with offsets
     /// - Returns: a fully constructed `PhysicsWheel` instance
-    private func produce(type: VehicleType, at position: CGPoint, using chasis: ChasisNode, shockPostPosition: CGPoint, springAttachmentPoint: CGPoint) -> PhysicsWheel? {
+    private func produce(type: VehicleType, at position: CGPoint, using chasis: ChasisNode, shockPostPosition: CGPoint, springAttachmentPoint: CGPoint, isBreakable: Bool) -> PhysicsWheel? {
         
         let wheelNode = wheelFactory.produce(of: type, at: position)
         guard let suspension = suspensionFactory.produce(of: type,
@@ -87,7 +88,7 @@ struct VehcileAbstractFactory {
                                                    springAttachmentPoint: springAttachmentPoint) else {
                                                     return nil
         }
-        let physicsWheel = wheelFactory.produce(with: wheelNode, using: suspension)
+        let physicsWheel = wheelFactory.produce(with: wheelNode, using: suspension, isBreakable: isBreakable)
         return physicsWheel
     }
     
