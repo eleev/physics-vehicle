@@ -9,8 +9,8 @@
 import CoreGraphics
 
 struct JeepStandardEngineConfiguration: EngineConfiguration {
-    var horsepower: Int = 40
-    var forwardSpeed: CGFloat = 950
+    var horsepower: Int = 35
+    var forwardSpeed: CGFloat = 750
     var backwardSpeed: CGFloat = -450
 }
 
