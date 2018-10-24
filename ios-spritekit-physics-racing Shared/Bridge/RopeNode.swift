@@ -56,7 +56,7 @@ class RopeNode: SKNode {
     
     func attach(to node: SKNode) {
         guard let attachmentBody = node.physicsBody, let scene = node.scene, ropes.count > 0, let parent = node.parent, let head = head?.physicsBody else {
-            return
+            fatalError()
         }
         let midx = node.frame.midX
         let midy = node.frame.midY
@@ -73,7 +73,7 @@ class RopeNode: SKNode {
     
     func anchor(to node: SKNode) {
         guard let attachmentBody = node.physicsBody, let scene = node.scene, ropes.count > 0, let tailPhysics = tail?.physicsBody else {
-            return
+            fatalError()
         }
         
         let joint = SKPhysicsJointPin.joint(withBodyA: tailPhysics, bodyB: attachmentBody, anchor: node.position)
@@ -86,7 +86,7 @@ class RopeNode: SKNode {
 
     func attach(anchor textureRepresentation: SKTexture) {
         guard let tailPosition = tail?.position, let unwrappedTail = tail, let scene = scene else {
-            return
+            fatalError()
         }
         let spriteRopeNode = ChainNode(nodeTexture: textureRepresentation)
         //        spriteRopeNode.anchorPoint = CGPoint(x: 0.5, y: 1.0)
@@ -106,7 +106,7 @@ class RopeNode: SKNode {
     
     private func constructPhysics(in world: SKPhysicsWorld) {
         guard let scene = scene else {
-            return
+            fatalError()
         }
         
         for index in 0..<ropes.count - 1 {
@@ -124,8 +124,9 @@ class RopeNode: SKNode {
             
             let joint = SKPhysicsJointPin.joint(withBodyA: physicsBodyA, bodyB: physicsBodyB, anchor: attachmentPoint)
             joint.shouldEnableLimits = true
-            joint.lowerAngleLimit = 0
-            joint.upperAngleLimit = 0
+            joint.lowerAngleLimit = 360.degreesToRadians
+            joint.upperAngleLimit = 360.degreesToRadians
+                    
             world.add(joint)
         }
     }
