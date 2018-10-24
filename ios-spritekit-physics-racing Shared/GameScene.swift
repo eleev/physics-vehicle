@@ -29,6 +29,8 @@ class GameScene: SKScene {
     var isRight = false
     var isBreak = false
     
+    var updatables: [Updatable] = []
+    
     // MARK: - Methods
     
     class func newGameScene() -> GameScene {
@@ -65,8 +67,25 @@ class GameScene: SKScene {
         
         let carFactory = VehcileAbstractFactory()
         car = try! carFactory.produce(type: .balista, at: spawnPosition?.position ?? .zero)
+//        let vehicleScene = SKScene(fileNamed: "BalistaVehicle")
+//        let builder = SKVehicleBuilder(scene: vehicleScene!, targetScene: self)
+//        car = builder.produce(at: spawnPosition?.position ?? .zero)
         addChild(car)
         car.joints.forEach {self.physicsWorld.add($0) }
+        
+//        builder.constructPhysics(in: physicsWorld)
+//        car.position = spawnPosition?.position ?? .zero
+
+//        let softPosition01 = childNode(withName: "Soft01")?.position
+//        let softPosition02 = childNode(withName: "Soft02")?.position
+//        let softPosition03 = childNode(withName: "Soft03")?.position
+//        let softPosition04 = childNode(withName: "Soft04")?.position
+//        
+//        let softBall = SoftPhysicsWheel(position: softPosition01!, size: CGSize(width: 50, height: 50), color: .yellow)
+//        softBall.zPosition = 20
+//        addChild(softBall)
+//        updatables += [softBall]
+        
         
         // Constraint the camera to follow the car
         let zeroDistance = SKRange(constantValue: 0)
@@ -136,11 +155,14 @@ class GameScene: SKScene {
     }
     #else
     override func didMove(to view: SKView) {
+        super.didMove(to: view)
         self.setUpScene()
     }
     #endif
     
     override func update(_ currentTime: TimeInterval) {
+        updatables.forEach { $0.update() }
+        
         // Called before each frame is rendered
         if isContinious {
             if isForward {
