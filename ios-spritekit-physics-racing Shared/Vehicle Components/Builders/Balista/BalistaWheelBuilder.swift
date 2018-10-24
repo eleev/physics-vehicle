@@ -40,6 +40,7 @@ struct BalistaWheelBuilder: WheelBuilder {
     var zPostiion: CGFloat      = 10
     var allowsRotation: Bool    = true
     var friction: CGFloat       = 1.0
+    var restitution: CGFloat    = 0.3
     
     // MARK: - Initializers
     

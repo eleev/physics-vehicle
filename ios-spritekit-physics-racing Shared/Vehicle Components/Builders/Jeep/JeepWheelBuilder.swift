@@ -39,7 +39,8 @@ struct JeepWheelBuilder: WheelBuilder {
     var size: CGSize            = CGSize(width: 78, height: 78)
     var zPostiion: CGFloat      = 10
     var allowsRotation: Bool    = true
-    var friction: CGFloat       = 1.0
+    var friction: CGFloat       = 0.9
+    var restitution: CGFloat    = 0.5
     
     // MARK: - Initializers
     

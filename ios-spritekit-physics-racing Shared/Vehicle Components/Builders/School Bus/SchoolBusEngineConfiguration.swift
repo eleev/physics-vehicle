@@ -9,7 +9,7 @@
 import CoreGraphics
 
 struct SchoolBusEngineConfiguration: EngineConfiguration {
-    var horsepower: Int = 60
-    var forwardSpeed: CGFloat = 650
+    var horsepower: Int = 40
+    var forwardSpeed: CGFloat = 500
     var backwardSpeed: CGFloat = -400
 }

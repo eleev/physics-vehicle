@@ -39,7 +39,8 @@ struct HumveeWheelBuilder: WheelBuilder {
     var size: CGSize            = CGSize(width: 94, height: 94)
     var zPostiion: CGFloat      = 10
     var allowsRotation: Bool    = true
-    var friction: CGFloat       = 0.35
+    var friction: CGFloat       = 0.8
+    var restitution: CGFloat    = 0.4
     
     // MARK: - Initializers
     

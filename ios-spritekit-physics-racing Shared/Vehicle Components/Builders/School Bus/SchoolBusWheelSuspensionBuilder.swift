@@ -12,12 +12,12 @@ struct SchoolBusWheelSuspensionBuilder: WheelSuspensionBuilder {
     
     // MARK: - Properties
     
-    var dapming: CGFloat                = 0.5
+    var dapming: CGFloat                = 0.8
     var frequiency: CGFloat             = 8
     var wheelOffset: CGPoint            = CGPoint(x: 0, y: 100)
     var shockPostColor: SKColor         = .clear
     var shockPostSize: CGSize           = CGSize(width: 40, height: 40)
-    var slideLoweLimit: CGFloat         = 5
+    var slideLoweLimit: CGFloat         = 1
     
     var shockPostPosition: CGPoint
     var springAttachmentPoint: CGPoint

@@ -40,6 +40,7 @@ struct SchoolBusWheelBuilder: WheelBuilder {
     var zPostiion: CGFloat      = 10
     var allowsRotation: Bool    = true
     var friction: CGFloat       = 0.85
+    var restitution: CGFloat    = 0.4
     
     // MARK: - Initializers
     

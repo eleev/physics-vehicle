@@ -17,7 +17,7 @@ struct BalistaWheelSuspensionBuilder: WheelSuspensionBuilder {
     var wheelOffset: CGPoint            = CGPoint(x: 0, y: 100)
     var shockPostColor: SKColor         = .clear
     var shockPostSize: CGSize           = CGSize(width: 40, height: 70)
-    var slideLoweLimit: CGFloat         = 5
+    var slideLoweLimit: CGFloat         = 10
     
     var shockPostPosition: CGPoint
     var springAttachmentPoint: CGPoint
