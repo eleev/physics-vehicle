@@ -21,6 +21,14 @@ class ChasisNode: SKSpriteNode {
         physicsBody?.density = builder.density
     }
     
+    init(node: SKSpriteNode) {
+        super.init(texture: node.texture, color: .clear, size: node.size)
+        
+        position = node.position
+        zPosition = node.zPosition
+        physicsBody = node.physicsBody
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

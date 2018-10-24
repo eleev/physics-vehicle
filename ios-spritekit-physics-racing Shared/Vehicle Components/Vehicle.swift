@@ -76,29 +76,100 @@ class Vehicle: SKNode {
     // MARK: - Private mehtods
     
     private func move(impulse: CGVector, angularImpulse: CGFloat) {
-        let chasisZRotation = chasis.zRotation.toDegrees
         
-        if chasisZRotation > -90, chasisZRotation > -270 {
+        
+//        var chasisZRotation = chasis.zRotation.toDegrees + 90
+//
+//        if chasisZRotation < 0 {
+//            chasisZRotation = -chasisZRotation
+//        }
+//
+//        debugPrint("chasis z rotation: ", chasisZRotation)
+//        let dx = CGFloat(cosf(Float(chasisZRotation)))
+//        debugPrint("dx: ", dx)
+//
+//        let dy = CGFloat(sinf(Float(chasisZRotation)))
+//        debugPrint("dy: ", dy)
+//
+//        let vector = CGVector(dx: dx * impulse.dx, dy: dy)
+//        debugPrint("vector: ", vector)
+        
+        
+//        for wheel in wheels {
+//            guard let deltaX = wheel.sprite.physicsBody?.velocity.dx, let deltaY = wheel.sprite.physicsBody?.velocity.dy else {
+//                continue
+//            }
+//            wheel.sprite.physicsBody?.applyAngularImpulse(angularImpulse)
+//            wheel.sprite.physicsBody?.applyTorque(angularImpulse * 10)
+//
+//            let forwardSpeed = engine.forwardSpeed()
+//            let deltaZ = sqrt(pow(deltaX, 2) + pow(deltaY, 2))
+//
+//            if deltaZ > forwardSpeed {
+//                debugPrint("velocity correction / f")
+//                let xProportion = deltaX / deltaZ
+//                let yProportion = deltaY / deltaZ
+//
+//                let correctedDeltaX = xProportion * forwardSpeed
+//                let correctedDeltaY = yProportion * forwardSpeed
+//                wheel.sprite.physicsBody?.velocity = CGVector(dx: correctedDeltaX, dy: correctedDeltaY)
+//            }
+//            let backwardSpeed = engine.backwardSpeed()
+//
+//            if deltaZ > backwardSpeed {
+//                debugPrint("velocity correction / b")
+//                let xProportion = deltaX / deltaZ
+//                let yProportion = deltaY / deltaZ
+//
+//                let correctedDeltaX = xProportion * backwardSpeed
+//                let correctedDeltaY = yProportion * backwardSpeed
+//                wheel.sprite.physicsBody?.velocity = CGVector(dx: correctedDeltaX, dy: correctedDeltaY)
+//            }
+//
+//            debugPrint(" ")
+//        }
+        
+        // -------------
+        
+        
+        let chasisZRotation = chasis.zRotation.toDegrees
+        debugPrint("degrees: ", chasisZRotation)
+        
+        if chasisZRotation > -70, chasisZRotation < 70 {
+            debugPrint("if")
             for wheel in wheels {
                 wheel.sprite.physicsBody?.applyImpulse(impulse)
+                
+                let velocity = wheel.sprite.physicsBody?.velocity
+                
+                let forwardSpeed = engine.forwardSpeed()
+                if velocity?.dx ?? 0.0 > forwardSpeed {
+                    wheel.sprite.physicsBody?.velocity.dx = forwardSpeed
+                }
+                
+                let backwardSpeed = engine.backwardSpeed()
+                if velocity?.dx ?? 0.0 < backwardSpeed {
+                    wheel.sprite.physicsBody?.velocity.dx = backwardSpeed
+                }
+
             }
         }
-        
+
         for wheel in wheels {
             wheel.sprite.physicsBody?.applyAngularImpulse(angularImpulse)
-            wheel.sprite.physicsBody?.applyForce(CGVector.init(dx: 0, dy: -9.8))
-            
-            let velocity = wheel.sprite.physicsBody?.velocity
-            
-            let forwardSpeed = engine.forwardSpeed()
-            if velocity?.dx ?? 0.0 > forwardSpeed {
-                wheel.sprite.physicsBody?.velocity.dx = forwardSpeed
-            }
-            
-            let backwardSpeed = engine.backwardSpeed()
-            if velocity?.dx ?? 0.0 < backwardSpeed {
-                wheel.sprite.physicsBody?.velocity.dx = backwardSpeed
-            }
+//            wheel.sprite.physicsBody?.applyForce(CGVector.init(dx: 0, dy: -9.8))
+
+//            let velocity = wheel.sprite.physicsBody?.velocity
+//
+//            let forwardSpeed = engine.forwardSpeed()
+//            if velocity?.dx ?? 0.0 > forwardSpeed {
+//                wheel.sprite.physicsBody?.velocity.dx = forwardSpeed
+//            }
+//
+//            let backwardSpeed = engine.backwardSpeed()
+//            if velocity?.dx ?? 0.0 < backwardSpeed {
+//                wheel.sprite.physicsBody?.velocity.dx = backwardSpeed
+//            }
         }
     }
     
@@ -108,23 +179,17 @@ class Vehicle: SKNode {
         let angle = chasis.zRotation - CGFloat.pi / 2
         let x = cos(angle)
         let y = sin(angle)
-        let forceFactor: CGFloat = 1500
+        let forceFactor: CGFloat = 2000
         
         chasis.physicsBody?.applyForce(CGVector(dx: x * forceFactor, dy: y * forceFactor), at: convertedPoint)
     }
     
     private func breakMovement() {
-        print(#function)
+//        chasis.physicsBody?.applyTorque(-500)
         
-        for wheel in wheels {
-            wheel.sprite.physicsBody?.applyForce(CGVector.init(dx: 0, dy: -9.8 * 350))
-            
+        for wheel in wheels where wheel.isBreakable  {
             wheel.sprite.physicsBody?.angularVelocity /= CGFloat.greatestFiniteMagnitude
-            
-//            wheel.sprite.physicsBody?.velocity = .zero
-            
-            let velocity = wheel.sprite.physicsBody?.velocity
-            wheel.sprite.physicsBody?.velocity = CGVector(dx: velocity?.dx ?? 1.0 / CGFloat.greatestFiniteMagnitude, dy: velocity?.dy ?? 1.0 / CGFloat.greatestFiniteMagnitude)
+            wheel.sprite.physicsBody?.velocity = .zero
         }
     }
 }

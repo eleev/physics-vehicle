@@ -20,6 +20,17 @@ class WheelNode: SKSpriteNode {
         physicsBody = SKPhysicsBody(texture: builder.texture, alphaThreshold: 0.0, size: self.size)
         physicsBody?.allowsRotation = builder.allowsRotation
         physicsBody?.friction = builder.friction
+        physicsBody?.restitution = builder.restitution
+        physicsBody?.usesPreciseCollisionDetection = true
+    }
+    
+    init(node: SKSpriteNode) {
+        super.init(texture: node.texture, color: .clear, size: node.size)
+        
+        position = node.position
+        zPosition = node.zPosition
+        zRotation = node.zRotation
+        physicsBody = node.physicsBody
         physicsBody?.usesPreciseCollisionDetection = true
     }
     

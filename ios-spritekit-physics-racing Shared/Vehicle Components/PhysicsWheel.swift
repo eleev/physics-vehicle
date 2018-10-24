@@ -8,17 +8,26 @@
 
 import SpriteKit
 
+//protocol PhysicsWheel {
+//    var sprite: SKNode { get }
+//    var suspension: WheelSuspension { get }
+//    var isBreakable: Bool { get }
+//
+//
+//}
+
 struct PhysicsWheel {
     
     // MARK: - Properties
     
-    private(set) var sprite: WheelNode
+//    private(set) var sprite: WheelNode
+    private(set) var sprite: SKNode
     private(set) var suspension: WheelSuspension
     private(set) var isBreakable: Bool
     
     // MARK: - Initializers
     
-    init(node: WheelNode, suspension: WheelSuspension, isBreakable: Bool = true) {
+    init(node: SKNode, suspension: WheelSuspension, isBreakable: Bool = true) {
         self.sprite = node
         self.suspension = suspension
         self.isBreakable = isBreakable
