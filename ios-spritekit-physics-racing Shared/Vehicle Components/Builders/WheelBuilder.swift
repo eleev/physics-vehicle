@@ -21,4 +21,5 @@ protocol WheelBuilder {
     
     var allowsRotation: Bool { get }
     var friction: CGFloat { get }
+    var restitution: CGFloat { get }
 }
