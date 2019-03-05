@@ -14,4 +14,3 @@ enum VehicleType {
     case schoolBus
     case balista
 }
-

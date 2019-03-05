@@ -8,19 +8,10 @@
 
 import SpriteKit
 
-//protocol PhysicsWheel {
-//    var sprite: SKNode { get }
-//    var suspension: WheelSuspension { get }
-//    var isBreakable: Bool { get }
-//
-//
-//}
-
 struct PhysicsWheel {
     
     // MARK: - Properties
     
-//    private(set) var sprite: WheelNode
     private(set) var sprite: SKNode
     private(set) var suspension: WheelSuspension
     private(set) var isBreakable: Bool
