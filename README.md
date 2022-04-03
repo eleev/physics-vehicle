@@ -9,6 +9,7 @@
 # 📜 Features
 - 2D physics suspension mechanics
 - Rope bridges
+- HUD controls
 - Multi-platform app template in action
 - `SpriteKit` as a backend rendering and scene-graph framework
 
