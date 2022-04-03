@@ -6,6 +6,12 @@
 # ✍️ About
 🏎 Demo for physics-based 2D car behaviour and suspension [Swift, SpriteKit, iOS, macOS].
 
+# 📜 Features
+- 2D physics suspension mechanics
+- Rope bridges
+- Multi-platform app template in action
+- `SpriteKit` as a backend rendering and scene-graph framework
+
 # 📺 Demo
 
 # 👨‍💻 Author 
