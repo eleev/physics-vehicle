@@ -149,13 +149,13 @@
 		A9844443217A132E00CD5B09 /* BalistaWheelSuspensionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalistaWheelSuspensionBuilder.swift; sourceTree = "<group>"; };
 		A9844446217A136800CD5B09 /* BalistaWheelsLocationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalistaWheelsLocationBuilder.swift; sourceTree = "<group>"; };
 		A987EBE4210D9B2E00D0C07E /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		A987EBEC210D9B2F00D0C07E /* ios-spritekit-physics-racing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-spritekit-physics-racing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A987EBEC210D9B2F00D0C07E /* PhysicsVehicle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhysicsVehicle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A987EBEF210D9B2F00D0C07E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A987EBF1210D9B2F00D0C07E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A987EBF4210D9B2F00D0C07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A987EBF7210D9B2F00D0C07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A987EBF9210D9B2F00D0C07E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A987EBFE210D9B2F00D0C07E /* ios-spritekit-physics-racing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-spritekit-physics-racing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A987EBFE210D9B2F00D0C07E /* PhysicsVehicle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhysicsVehicle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A987EC00210D9B2F00D0C07E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A987EC02210D9B2F00D0C07E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A987EC05210D9B2F00D0C07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -299,14 +299,14 @@
 			isa = PBXGroup;
 			children = (
 				A987EC18210D9BA600D0C07E /* .gitignore */,
-				A987EBE3210D9B2E00D0C07E /* ios-spritekit-physics-racing Shared */,
-				A987EBEE210D9B2F00D0C07E /* ios-spritekit-physics-racing iOS */,
-				A987EBFF210D9B2F00D0C07E /* ios-spritekit-physics-racing macOS */,
+				A987EBE3210D9B2E00D0C07E /* PhysicsVehicle */,
+				A987EBEE210D9B2F00D0C07E /* PhysicsVehicle iOS */,
+				A987EBFF210D9B2F00D0C07E /* PhysicsVehicle macOS */,
 				A987EBED210D9B2F00D0C07E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A987EBE3210D9B2E00D0C07E /* ios-spritekit-physics-racing Shared */ = {
+		A987EBE3210D9B2E00D0C07E /* PhysicsVehicle */ = {
 			isa = PBXGroup;
 			children = (
 				A983E6D02179B78D009DBA43 /* Bridge */,
@@ -319,19 +319,19 @@
 				A987EC24210E125F00D0C07E /* Assets.xcassets */,
 				A9FE2AB72177711200383D0F /* Legacy */,
 			);
-			path = "ios-spritekit-physics-racing Shared";
+			path = PhysicsVehicle;
 			sourceTree = "<group>";
 		};
 		A987EBED210D9B2F00D0C07E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A987EBEC210D9B2F00D0C07E /* ios-spritekit-physics-racing.app */,
-				A987EBFE210D9B2F00D0C07E /* ios-spritekit-physics-racing.app */,
+				A987EBEC210D9B2F00D0C07E /* PhysicsVehicle.app */,
+				A987EBFE210D9B2F00D0C07E /* PhysicsVehicle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A987EBEE210D9B2F00D0C07E /* ios-spritekit-physics-racing iOS */ = {
+		A987EBEE210D9B2F00D0C07E /* PhysicsVehicle iOS */ = {
 			isa = PBXGroup;
 			children = (
 				A987EBEF210D9B2F00D0C07E /* AppDelegate.swift */,
@@ -340,10 +340,10 @@
 				A987EBF6210D9B2F00D0C07E /* LaunchScreen.storyboard */,
 				A987EBF9210D9B2F00D0C07E /* Info.plist */,
 			);
-			path = "ios-spritekit-physics-racing iOS";
+			path = "PhysicsVehicle iOS";
 			sourceTree = "<group>";
 		};
-		A987EBFF210D9B2F00D0C07E /* ios-spritekit-physics-racing macOS */ = {
+		A987EBFF210D9B2F00D0C07E /* PhysicsVehicle macOS */ = {
 			isa = PBXGroup;
 			children = (
 				A987EC00210D9B2F00D0C07E /* AppDelegate.swift */,
@@ -351,7 +351,7 @@
 				A987EC04210D9B2F00D0C07E /* Main.storyboard */,
 				A987EC07210D9B2F00D0C07E /* Info.plist */,
 			);
-			path = "ios-spritekit-physics-racing macOS";
+			path = "PhysicsVehicle macOS";
 			sourceTree = "<group>";
 		};
 		A987EC2A210E132100D0C07E /* Extensions */ = {
@@ -387,9 +387,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A987EBEB210D9B2F00D0C07E /* ios-spritekit-physics-racing iOS */ = {
+		A987EBEB210D9B2F00D0C07E /* PhysicsVehicle iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A987EC12210D9B2F00D0C07E /* Build configuration list for PBXNativeTarget "ios-spritekit-physics-racing iOS" */;
+			buildConfigurationList = A987EC12210D9B2F00D0C07E /* Build configuration list for PBXNativeTarget "PhysicsVehicle iOS" */;
 			buildPhases = (
 				A987EBE8210D9B2F00D0C07E /* Sources */,
 				A987EBE9210D9B2F00D0C07E /* Frameworks */,
@@ -399,14 +399,14 @@
 			);
 			dependencies = (
 			);
-			name = "ios-spritekit-physics-racing iOS";
+			name = "PhysicsVehicle iOS";
 			productName = "ios-spritekit-physics-racing iOS";
-			productReference = A987EBEC210D9B2F00D0C07E /* ios-spritekit-physics-racing.app */;
+			productReference = A987EBEC210D9B2F00D0C07E /* PhysicsVehicle.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A987EBFD210D9B2F00D0C07E /* ios-spritekit-physics-racing macOS */ = {
+		A987EBFD210D9B2F00D0C07E /* PhysicsVehicle macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A987EC15210D9B2F00D0C07E /* Build configuration list for PBXNativeTarget "ios-spritekit-physics-racing macOS" */;
+			buildConfigurationList = A987EC15210D9B2F00D0C07E /* Build configuration list for PBXNativeTarget "PhysicsVehicle macOS" */;
 			buildPhases = (
 				A987EBFA210D9B2F00D0C07E /* Sources */,
 				A987EBFB210D9B2F00D0C07E /* Frameworks */,
@@ -416,9 +416,9 @@
 			);
 			dependencies = (
 			);
-			name = "ios-spritekit-physics-racing macOS";
+			name = "PhysicsVehicle macOS";
 			productName = "ios-spritekit-physics-racing macOS";
-			productReference = A987EBFE210D9B2F00D0C07E /* ios-spritekit-physics-racing.app */;
+			productReference = A987EBFE210D9B2F00D0C07E /* PhysicsVehicle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -428,20 +428,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1330;
 				ORGANIZATIONNAME = "Astemir Eleev";
 				TargetAttributes = {
 					A987EBEB210D9B2F00D0C07E = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1330;
 					};
 					A987EBFD210D9B2F00D0C07E = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
-			buildConfigurationList = A987EBE2210D9B2E00D0C07E /* Build configuration list for PBXProject "ios-spritekit-physics-racing" */;
+			buildConfigurationList = A987EBE2210D9B2E00D0C07E /* Build configuration list for PBXProject "PhysicsVehicle" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -454,8 +454,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A987EBEB210D9B2F00D0C07E /* ios-spritekit-physics-racing iOS */,
-				A987EBFD210D9B2F00D0C07E /* ios-spritekit-physics-racing macOS */,
+				A987EBEB210D9B2F00D0C07E /* PhysicsVehicle iOS */,
+				A987EBFD210D9B2F00D0C07E /* PhysicsVehicle macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -658,6 +658,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -715,6 +716,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -746,16 +748,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3K58FE38R;
-				INFOPLIST_FILE = "ios-spritekit-physics-racing iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				INFOPLIST_FILE = "$(SRCROOT)/PhysicsVehicle iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-physics-racing";
-				PRODUCT_NAME = "ios-spritekit-physics-racing";
+				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.physics-vehicle";
+				PRODUCT_NAME = PhysicsVehicle;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -767,16 +769,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3K58FE38R;
-				INFOPLIST_FILE = "ios-spritekit-physics-racing iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				INFOPLIST_FILE = "$(SRCROOT)/PhysicsVehicle iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-physics-racing";
-				PRODUCT_NAME = "ios-spritekit-physics-racing";
+				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.physics-vehicle";
+				PRODUCT_NAME = PhysicsVehicle;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -789,16 +791,16 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "ios-spritekit-physics-racing macOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/PhysicsVehicle macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-physics-racing";
-				PRODUCT_NAME = "ios-spritekit-physics-racing";
+				PRODUCT_NAME = PhysicsVehicle;
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -809,23 +811,23 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "ios-spritekit-physics-racing macOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/PhysicsVehicle macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-physics-racing";
-				PRODUCT_NAME = "ios-spritekit-physics-racing";
+				PRODUCT_NAME = PhysicsVehicle;
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A987EBE2210D9B2E00D0C07E /* Build configuration list for PBXProject "ios-spritekit-physics-racing" */ = {
+		A987EBE2210D9B2E00D0C07E /* Build configuration list for PBXProject "PhysicsVehicle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A987EC10210D9B2F00D0C07E /* Debug */,
@@ -834,7 +836,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A987EC12210D9B2F00D0C07E /* Build configuration list for PBXNativeTarget "ios-spritekit-physics-racing iOS" */ = {
+		A987EC12210D9B2F00D0C07E /* Build configuration list for PBXNativeTarget "PhysicsVehicle iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A987EC13210D9B2F00D0C07E /* Debug */,
@@ -843,7 +845,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A987EC15210D9B2F00D0C07E /* Build configuration list for PBXNativeTarget "ios-spritekit-physics-racing macOS" */ = {
+		A987EC15210D9B2F00D0C07E /* Build configuration list for PBXNativeTarget "PhysicsVehicle macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A987EC16210D9B2F00D0C07E /* Debug */,

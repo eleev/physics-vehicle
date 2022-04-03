@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-protocol Updatable: class {
+protocol Updatable: AnyObject {
     func update()
 }
 

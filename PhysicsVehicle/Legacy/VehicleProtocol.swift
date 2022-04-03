@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-protocol VehicleProtocol: class {
+protocol VehicleProtocol: AnyObject {
     var joints: [SKPhysicsJoint] { get }
     var chasis: SKSpriteNode { get }
 
