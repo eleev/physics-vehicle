@@ -12,7 +12,6 @@ class VehicleJeep: SKNode, VehicleProtocol {
     
     var joints = [SKPhysicsJoint]()
     var chasis: SKSpriteNode
-    //    var top: SKSpriteNode
     var leftWheel: SKSpriteNode
     var rightWheel: SKSpriteNode
     
@@ -57,7 +56,9 @@ class VehicleJeep: SKNode, VehicleProtocol {
         leftWheel.zPosition = 10
         leftWheel.position = CGPoint(x: (chasis.position.x - chasis.size.width / 2) + 68, y: chasis.position.y - wheelOffsetY)
         leftWheel.physicsBody = SKPhysicsBody(texture: tireTexture, alphaThreshold: 0.0, size: leftWheel.size)
-        //        leftWheel.physicsBody = SKPhysicsBody(circleOfRadius: leftWheel.size.width / 2)
+        /*
+        leftWheel.physicsBody = SKPhysicsBody(circleOfRadius: leftWheel.size.width / 2)
+        */
         leftWheel.physicsBody?.allowsRotation = true
         
         
@@ -65,7 +66,9 @@ class VehicleJeep: SKNode, VehicleProtocol {
         rightWheel.zPosition = 10
         rightWheel.position = CGPoint(x: (chasis.position.x + chasis.size.width / 2) - 72, y: chasis.position.y - wheelOffsetY)
         rightWheel.physicsBody = SKPhysicsBody(texture: tireTexture, alphaThreshold: 0.0, size: rightWheel.size)
-        //        rightWheel.physicsBody = SKPhysicsBody(circleOfRadius: rightWheel.size.width / 2)
+        /*
+        rightWheel.physicsBody = SKPhysicsBody(circleOfRadius: rightWheel.size.width / 2)
+        */
         rightWheel.physicsBody?.allowsRotation = true
         
         // Left Suspention
@@ -106,8 +109,10 @@ class VehicleJeep: SKNode, VehicleProtocol {
         
         // Add all the joints to the joints array
         
-        //        joints += [joint]
-        
+        /*
+        joints += [joint]
+        */
+         
         joints += [leftSlide]
         joints += [leftSpring]
         joints += [leftPin]
@@ -119,7 +124,6 @@ class VehicleJeep: SKNode, VehicleProtocol {
         super.init()
         
         addChild(chasis)
-        //        addChild(top)
         addChild(leftWheel)
         addChild(rightWheel)
         addChild(leftShockPost)
@@ -169,46 +173,55 @@ class VehicleJeep: SKNode, VehicleProtocol {
     func applyLeftTilt() {
         let point = CGPoint(x: -(chasis.size.width / 2 - 60), y: chasis.size.height / 4)
         let convertedPoint = chasis.convert(point, to: self)
-        debugPrint("coverted left point: ", convertedPoint)
+        debugPrint("converted left point: ", convertedPoint)
         
-//        let node = SKShapeNode(circleOfRadius: 10)
-//        node.fillColor = .blue
-//        node.zPosition = 10000
-//        node.position = convertedPoint
-//        self.addChild(node)
-//        let actions = SKAction.sequence([SKAction.wait(forDuration: 2), SKAction.removeFromParent()])
-//        node.run(actions)
-        
+        /*
+        let node = SKShapeNode(circleOfRadius: 10)
+        node.fillColor = .blue
+        node.zPosition = 10000
+        node.position = convertedPoint
+        self.addChild(node)
+        let actions = SKAction.sequence([SKAction.wait(forDuration: 2), SKAction.removeFromParent()])
+        node.run(actions)
+        */
+         
         let angle = chasis.zRotation - CGFloat.pi / 2
         let x = cos(angle)
         let y = sin(angle)
         let forceFactor: CGFloat = 1200
         
-        //        let convertedPoint = self.scene?.convert(point, from: chasis)
-        //        let convertedPoint = self.scene?.view?.convert(point, to: scene!)
+        /*
+        let convertedPoint = self.scene?.convert(point, from: chasis)
+        let convertedPoint = self.scene?.view?.convert(point, to: scene!)
+        */
+         
         chasis.physicsBody?.applyForce(CGVector(dx: x * forceFactor, dy: y * forceFactor), at: convertedPoint)
     }
     
     func applyRightTilt() {
         let point = CGPoint(x: chasis.size.width / 2 - 60, y: chasis.size.height / 4)
         let convertedPoint = chasis.convert(point, to: self)
-        debugPrint("coverted left point: ", convertedPoint)
+        debugPrint("converted right point: ", convertedPoint)
         
-//        let node = SKShapeNode(circleOfRadius: 10)
-//        node.fillColor = .red
-//        node.zPosition = 10000
-//        node.position = convertedPoint
-//        self.addChild(node)
-//        let actions = SKAction.sequence([SKAction.wait(forDuration: 2), SKAction.removeFromParent()])
-//        node.run(actions)
-        
+        /*
+        let node = SKShapeNode(circleOfRadius: 10)
+        node.fillColor = .red
+        node.zPosition = 10000
+        node.position = convertedPoint
+        self.addChild(node)
+        let actions = SKAction.sequence([SKAction.wait(forDuration: 2), SKAction.removeFromParent()])
+        node.run(actions)
+        */
+         
         let angle = chasis.zRotation - CGFloat.pi / 2
         let x = cos(angle)
         let y = sin(angle)
         let forceFactor: CGFloat = 1200
         
-        //        let convertedPoint = self.scene?.convert(point, from: chasis)
-        //        let convertedPoint = self.scene?.view?.convert(point, to: scene!)
+        /*
+        let convertedPoint = self.scene?.convert(point, from: chasis)
+        let convertedPoint = self.scene?.view?.convert(point, to: scene!)
+        */
         chasis.physicsBody?.applyForce(CGVector(dx: x * forceFactor, dy: y * forceFactor), at: convertedPoint)
     }
     

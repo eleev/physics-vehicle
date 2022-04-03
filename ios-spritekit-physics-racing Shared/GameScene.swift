@@ -31,6 +31,8 @@ class GameScene: SKScene {
     
     var updatables: [Updatable] = []
     
+    let massMax: CGFloat = .greatestFiniteMagnitude
+    
     // MARK: - Methods
     
     class func newGameScene() -> GameScene {
@@ -67,25 +69,30 @@ class GameScene: SKScene {
         
         let carFactory = VehcileAbstractFactory()
         car = try! carFactory.produce(type: .balista, at: spawnPosition?.position ?? .zero)
-//        let vehicleScene = SKScene(fileNamed: "BalistaVehicle")
-//        let builder = SKVehicleBuilder(scene: vehicleScene!, targetScene: self)
-//        car = builder.produce(at: spawnPosition?.position ?? .zero)
+        /*
+        let vehicleScene = SKScene(fileNamed: "BalistaVehicle")
+        let builder = SKVehicleBuilder(scene: vehicleScene!, targetScene: self)
+        car = builder.produce(at: spawnPosition?.position ?? .zero)
+        */
         addChild(car)
         car.joints.forEach {self.physicsWorld.add($0) }
         
-//        builder.constructPhysics(in: physicsWorld)
-//        car.position = spawnPosition?.position ?? .zero
-
-//        let softPosition01 = childNode(withName: "Soft01")?.position
-//        let softPosition02 = childNode(withName: "Soft02")?.position
-//        let softPosition03 = childNode(withName: "Soft03")?.position
-//        let softPosition04 = childNode(withName: "Soft04")?.position
-//        
-//        let softBall = SoftPhysicsWheel(position: softPosition01!, size: CGSize(width: 50, height: 50), color: .yellow)
-//        softBall.zPosition = 20
-//        addChild(softBall)
-//        updatables += [softBall]
+        /*
+        builder.constructPhysics(in: physicsWorld)
+        car.position = spawnPosition?.position ?? .zero
+         */
+         
+        /*
+        let softPosition01 = childNode(withName: "Soft01")?.position
+        let softPosition02 = childNode(withName: "Soft02")?.position
+        let softPosition03 = childNode(withName: "Soft03")?.position
+        let softPosition04 = childNode(withName: "Soft04")?.position
         
+        let softBall = SoftPhysicsWheel(position: softPosition01!, size: CGSize(width: 50, height: 50), color: .yellow)
+        softBall.zPosition = 20
+        addChild(softBall)
+        updatables += [softBall]
+         */
         
         // Constraint the camera to follow the car
         let zeroDistance = SKRange(constantValue: 0)
@@ -100,13 +107,13 @@ class GameScene: SKScene {
         ropeNodeStart?.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 10, height: 10))
         ropeNodeStart?.physicsBody?.affectedByGravity = false
         ropeNodeStart?.physicsBody?.isDynamic = false
-        ropeNodeStart?.physicsBody?.mass = 999999
+        ropeNodeStart?.physicsBody?.mass = massMax
 
         let ropeNodeEnd = childNode(withName: "Rope Node 02")
         ropeNodeEnd?.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 10, height: 10))
         ropeNodeEnd?.physicsBody?.affectedByGravity = false
         ropeNodeEnd?.physicsBody?.isDynamic = false
-        ropeNodeEnd?.physicsBody?.mass = 999999
+        ropeNodeEnd?.physicsBody?.mass = massMax
         
         let ropeNode3 = childNode(withName: "Rope Node 03")
         ropeNode3?.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 10, height: 10))
@@ -126,13 +133,13 @@ class GameScene: SKScene {
         bridgeNode2.attach(to: ropeNode3!)
         bridgeNode2.anchor(to: ropeNode4!)
         
+        /*
+        let bridgeNode3 = RopeNode(with: 20, and: SKTexture(imageNamed: "Ring"))
+        bridgeNode3.attach(to: ropeNode3!)
         
-//        let bridgeNode3 = RopeNode(with: 20, and: SKTexture(imageNamed: "Ring"))
-//        bridgeNode3.attach(to: ropeNode3!)
-//        
-//        let bridgeNode4 = RopeNode(with: 20, and: SKTexture(imageNamed: "Ring"))
-//        bridgeNode4.attach(to: ropeNode4!)
-        
+        let bridgeNode4 = RopeNode(with: 20, and: SKTexture(imageNamed: "Ring"))
+        bridgeNode4.attach(to: ropeNode4!)
+        */
         
         // MARK: - Test Code Ends
         
@@ -223,6 +230,7 @@ extension GameScene {
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        /* Empty implementation */
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

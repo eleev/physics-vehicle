@@ -28,7 +28,7 @@ struct BalistaChasisBuilder: ChasisBuilder {
     }
     var position: CGPoint
     
-    var size: CGSize        = CGSize(width: 600, height: 317.72)
+    var size: CGSize = .init(width: 600, height: 317.72)
     var zPosition: CGFloat  = 8
     var density: CGFloat    = 1.2
     

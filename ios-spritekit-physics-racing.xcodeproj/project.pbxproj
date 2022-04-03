@@ -27,6 +27,7 @@
 		A91FCF49217484BA000225E5 /* WheelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91FCF47217484BA000225E5 /* WheelNode.swift */; };
 		A9300AE1216E5ECF00AF1C06 /* WheelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9300AE0216E5ECF00AF1C06 /* WheelBuilder.swift */; };
 		A9300AE6216E5F5300AF1C06 /* VehicleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987EC1B210D9DAE00D0C07E /* VehicleProtocol.swift */; };
+		A93E9E38240E202A0047AFA4 /* GameLevel.sks in Resources */ = {isa = PBXBuildFile; fileRef = A93E9E37240E202A0047AFA4 /* GameLevel.sks */; };
 		A94842B821734181009AA789 /* WheelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9300AE0216E5ECF00AF1C06 /* WheelBuilder.swift */; };
 		A95C9EEE2178DAA30089548C /* JeepEngineConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C9EED2178DAA30089548C /* JeepEngineConfiguration.swift */; };
 		A95C9EF02178DAC50089548C /* EngineConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C9EEF2178DAC50089548C /* EngineConfiguration.swift */; };
@@ -129,6 +130,7 @@
 		A91FCF4421747AE5000225E5 /* JeepChasisBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeepChasisBuilder.swift; sourceTree = "<group>"; };
 		A91FCF47217484BA000225E5 /* WheelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelNode.swift; sourceTree = "<group>"; };
 		A9300AE0216E5ECF00AF1C06 /* WheelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelBuilder.swift; sourceTree = "<group>"; };
+		A93E9E37240E202A0047AFA4 /* GameLevel.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameLevel.sks; sourceTree = "<group>"; };
 		A95C9EED2178DAA30089548C /* JeepEngineConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeepEngineConfiguration.swift; sourceTree = "<group>"; };
 		A95C9EEF2178DAC50089548C /* EngineConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineConfiguration.swift; sourceTree = "<group>"; };
 		A95C9EF32178DAE80089548C /* HumveeEngineConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumveeEngineConfiguration.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				A9300ADF216E5EBB00AF1C06 /* Vehicle Components */,
 				A987EC2A210E132100D0C07E /* Extensions */,
 				A987EBE4210D9B2E00D0C07E /* Actions.sks */,
+				A93E9E37240E202A0047AFA4 /* GameLevel.sks */,
 				A987EC21210E124700D0C07E /* GameScene.sks */,
 				A987EC1E210E123900D0C07E /* GameScene.swift */,
 				A987EC24210E125F00D0C07E /* Assets.xcassets */,
@@ -468,6 +471,7 @@
 				A987EC19210D9BA600D0C07E /* .gitignore in Resources */,
 				A98C56CF217F730E00EB3826 /* BalistaVehicle.sks in Resources */,
 				A987EC25210E126200D0C07E /* Assets.xcassets in Resources */,
+				A93E9E38240E202A0047AFA4 /* GameLevel.sks in Resources */,
 				A987EC22210E124700D0C07E /* GameScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
