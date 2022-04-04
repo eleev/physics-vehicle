@@ -22,7 +22,7 @@ Please wait while the `.gif` files are loading (there are 4 files, that weight a
 |  |  |
 :-------------------------:|:-------------------------:
 ![](Assets/jeep-01.gif) | ![](Assets/jeep-02.gif)
-![](Assets/balista-01.gif) | ![](Assets/balista-01.gif) 
+![](Assets/balista-01.gif) | ![](Assets/balista-02.gif) 
 
 
 # 👨‍💻 Author 
